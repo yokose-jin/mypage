@@ -6,23 +6,21 @@ const {url,title,description,lastUpdatedDate,tags} = Astro.props;
 ---
 <style>
 	.lastUpdatedDate {
+        display:block;
+        margin-top:4px;
 		font-size: 0.7em;
 	}
     .icon {
         vertical-align: middle;
     }
-    /* .goAllTags {
-        display:flex;
-        font-size: 0.4em;
-        margin-left:0px;
-        color: rgb(129, 78, 71);
-        vertical-align: bottom;
-    } */
     .tags {
         display:flex;
         flex-wrap: wrap;
         vertical-align: middle;
         margin-top:5px;
+    }
+    .description {
+        margin-top: 0px;
     }
 </style>
 <li>
