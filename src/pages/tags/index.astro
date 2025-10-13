@@ -1,27 +1,24 @@
 ---
-const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+import Navigation from "../../components/Navigation.astro";
+import Tag from "../../components/Tag.astro";
+import "../../styles/global.css";
+const allPosts = Object.values(import.meta.glob("../documents/posts/*.md", { eager: true }));
 const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
 const baseUrl = import.meta.env.BASE_URL;
 ---
-<style>
-    a {
-        color: #00539F;
-    }
 
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .tag {
-        margin: 0.25em;
-        border: dotted 1px #a1a1a1;
-        border-radius: .5em;
-        padding: .5em 1em;
-        font-size: 1.15em;
-        background-color: #F8FCFD;
-    }
-</style>
-<div class="tags">
-    {uniqueTags.map((tag) => <p class="tag"><a href={`${baseUrl}/tags/${tag}`}>{tag}</a></p>)}
-</div>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <title>タグ一覧</title>
+    </head>
+    <body>
+        <p>タグ一覧</p>
+        <ul class="tags">
+            {uniqueTags.map((tag) =><li> <Tag tag={tag}/></li>)}
+        </ul>
+    </body>
+    <Navigation/>
+</html>

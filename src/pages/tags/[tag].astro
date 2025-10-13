@@ -18,18 +18,6 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 <style>
-    @media screen and (min-width: 768px) {
-        body {
-            margin-top: 1em;
-            margin-left:25%;
-            margin-right:25%;
-        }
-    }
-    @media screen and (max-width: 768px) {
-        body {
-            margin: 1em 5% 1em 1em;
-        }
-    }
     .icon {
         vertical-align: middle;
     }
@@ -37,21 +25,25 @@ const { posts } = Astro.props;
         font-size:0.6em;
     }
 </style>
-<html>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <title>{tag}</title>
+    </head>
+    <body>
+        <p>{tag}のタグが付いた記事</p>
+        <ul>
+            <!-- {posts.map((post: any) => <DisplayPost url={post.url} title={post.frontmatter.title} lastUpdatedDate={post.frontmatter.lastUpdatedDate}/>)} -->
+            {posts.map((post:any) => (
+                <li>
+                    <span class="material-icons icon">article</span>
+                    <a class="docTitle" href={post.url}>{post.frontmatter.title}</a>
+                    <span class="lastUpdatedDate">最終更新日:{post.frontmatter.lastUpdatedDate.slice(0,10)}</span>
+                </li>
+                <p class="description">{post.frontmatter.description}</p>
+            ))}
+        </ul>
+    </body>
 </html>
-<body>
-    <p>{tag}のタグが付いた記事</p>
-    <ul>
-        <!-- {posts.map((post: any) => <DisplayPost url={post.url} title={post.frontmatter.title} lastUpdatedDate={post.frontmatter.lastUpdatedDate}/>)} -->
-        {posts.map((post:any) => (
-            <li>
-                <span class="material-icons icon">article</span>
-                <a class="docTitle" href={post.url}>{post.frontmatter.title}</a>
-                <span class="lastUpdatedDate">最終更新日:{post.frontmatter.lastUpdatedDate.slice(0,10)}</span>
-            </li>
-            <p class="description">{post.frontmatter.description}</p>
-        ))}
-    </ul>
-</body>
