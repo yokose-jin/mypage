@@ -34,6 +34,11 @@ li {
     border-bottom: dashed 1px #3a597d;
     text-shadow: rgb(213, 213, 213) 0.5px 0 2px;
 }
+.prefaceTitle {
+    font-size: 1.2em;
+    padding: 0px 0px 0px 8px;
+    box-shadow: -3px 0px;
+}
 @media screen and (min-width: 768px) {
     body {
         margin-top: 1em;
