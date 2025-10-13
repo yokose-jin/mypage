@@ -1,0 +1,27 @@
+[
+    {
+        "category": "代数幾何",
+        "files" : [
+            {
+                "title": "スキームの定義",
+                "link": "aaa",
+                "description": "スキームを定義する"
+            },
+            {
+                "title": "スキームの定義",
+                "link": "aaa",
+                "description": "スキームを定義する"
+            }
+        ]
+    },
+    {
+        "category": "圏論",
+        "files" : [
+            {
+                "title": "スキームの定義",
+                "link": "aaa",
+                "description": "スキームを定義する"
+            }
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+---
+import PageTitle from "../components/PageTitle.astro";
+import DisplayPost from "../components/DisplayPost.astro";
+import "../styles/global.css";
+const allPosts = await Astro.glob('./documents/posts/*.md');
+---
+<style>
+    ul {
+        list-style-type: none;
+    }
+</style>
+<html lang="jp">
+	<head>
+		<meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+		<title>ブログ</title>
+	</head>
+	<body>
+        <PageTitle title="ブログ"/>
+        <ul>
+            {allPosts.map((post) => (
+                <DisplayPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} lastUpdatedDate={post.frontmatter.lastUpdatedDate} tags={post.frontmatter.tags}/>
+            ))}
+        </ul>
+	</body>
+</html>

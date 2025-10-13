@@ -1,0 +1,95 @@
+[
+    {
+        "category": "数学",
+        "files" : [
+            {
+                "title": "Grothendieck Circle",
+                "titleLang": "en",
+                "link": "https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/pubtexts.php",
+                "description": "EGAやSGAなどのGrothendieckの著作が纏まっているページ。Grothendieckは生前、彼自身の著作をインターネット上から削除して欲しいとの旨の手紙を友人に宛てているが、思うにGrothendieckの著作が多くの人に届くことの価値は矢張り大きい。Grothendieck Circleのメンバーは商用利用のためGrothendieckの著作を公開しているわけではなく、単に彼の著作を世に広めることを目的として活動している。つまり彼らはGrothendieck個人の意志よりも、数学の発展と、彼の著作の教育的価値を重要視したのだ。Grothendieckの著作の出版は、彼の意向に反しているとはいえ、代数幾何学を学ぶ私たちにとってこれ以上なく有益であるため、有り難く著作を読ませて頂くことにする。"
+            },
+            {
+                "title": "Stacks Project",
+                "titleLang": "en",
+                "link": "https://stacks.math.columbia.edu/browse",
+                "description": "Stacks Projectという、スキーム論の基礎が大体載っているwebサイト。恐らく通読するものではないが、所々教科書的に読むことの出来る章があるような気がする。"
+            },
+            {
+                "title": "AIM workshop problem lists",
+                "titleLang": "en",
+                "link": "https://aimath.org/problemlists/",
+                "description": "いろんな分野のいろんな問題がまとまっている。"
+            },
+            {
+                "title": "壱大整域",
+                "titleLang": "jp",
+                "link": "https://alg-d.com/math/kan_extension/",
+                "description": "圏論の基礎が纏まったwebサイト。圏論をやっていると現れる様々な概念を、Kan拡張を用いて構成的に記述している。面白い。幾何学やるときに役立ちそう。"
+            },
+            {
+                "title": "Avendia",
+                "titleLang": "en",
+                "link": "https://ziphil.com/mathematics/mathematics-diary/",
+                "description": "数理論理学と圏論にまつわる話が載っている。Grothendieck位相に関する記事もある。"
+            },
+            {
+                "title": "nLab",
+                "titleLang": "en",
+                "link": "https://ncatlab.org/nlab/show/category+theory",
+                "description": "言わずと知れたnLab. 圏論のことなら大抵書いてある。"
+            },
+            {
+                "title": "Kerodon",
+                "titleLang": "en",
+                "link": "https://kerodon.net",
+                "description": "高次元圏の話が纏まっている。pdfが長過ぎてびびるので注意。まだ読んだことがない。"
+            },
+            {
+                "title": "檜山正幸のキマイラ飼育記",
+                "titleLang": "jp",
+                "link": "https://m-hiyama.hatenablog.com",
+                "description": "主に圏論にまつわる記事がたくさんある。結構マイナーな内容も含む。"
+            }
+        ]
+    },
+    {
+        "category": "プログラミングおよび計算理論関連",
+        "files": [
+            {
+                "title": "サルワカ",
+                "titleLang": "jp",
+                "link": "https://saruwakakun.com",
+                "description": "CSSの説明がわかりやすい。"
+            },
+            {
+                "title": "font-family maker",
+                "titleLang": "en",
+                "link": "https://saruwakakun.com/font-family",
+                "description": "サルワカのfont-family maker。フォントを設定するときに便利。"
+            },
+            {
+                "title": "Astro",
+                "titleLang": "en",
+                "link": "https://docs.astro.build/ja/getting-started/",
+                "description": "いま流行り(？)のAstroの公式レファレンス。かなり親切な説明書。このサイトもAstroで作ってる。"
+            },
+            {
+                "title": "Haskellでの型レベルプログラミング",
+                "titleLang": "jp",
+                "link": "https://zenn.dev/mod_poppo/books/haskell-type-level-programming",
+                "description": "Haskellでの型レベルプログラミングが学べる。"
+            }
+        ]
+    },
+    {
+        "category": "文学",
+        "files": [
+            {
+                "title": "青空文庫",
+                "titleLang": "jp",
+                "link": "https://www.aozora.gr.jp",
+                "description": "なんと著作権の切れた本が無料で公開されている！"
+            }
+        ]
+    }
+]

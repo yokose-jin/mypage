@@ -1,0 +1,21 @@
+---
+const {tag} = Astro.props;
+---
+<style>
+    a {
+        text-decoration: none;
+        color: #3d566d;
+    }
+    .tag {
+        box-shadow: 1px 1px 4px #d1d1d1;
+        background: #fbf9f6;
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 0.8em;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-left: solid 6px rgb(87, 83, 79);
+    }
+</style>
+<span class="tag"><a href={`/tags/${tag}`}>{tag}</a></span>

@@ -1,0 +1,23 @@
+---
+const {url,title,description,lastUpdatedDate,tags} = Astro.props;
+import Tag from "../components/Tag.astro";
+import "../styles/global.css";
+---
+<style>
+	.lastUpdatedDate {
+		font-size: 0.7em;
+	}
+    .icon {
+        vertical-align: middle;
+    }
+</style>
+<li>
+    <span class="material-icons icon">article</span>
+    <a class="docTitle" href={url} target="_blank" rel="noopener noreferrer">{title}</a>
+    <span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
+</li>
+<p>
+    <span>タグ:</span>
+    {(tags ?? []).map((tag:string)=>(<Tag tag={tag}/>))}
+</p>
+<p class="description">{description}</p>

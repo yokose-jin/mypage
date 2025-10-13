@@ -1,0 +1,37 @@
+---
+// import "../styles/global.css";
+const { frontmatter } = Astro.props;
+import Tag from "../components/Tag.astro";
+import "../styles/global.css";
+---
+<style>
+    .title {
+        font-size: 1.3em;
+    }
+    .lastUpdatedDate {
+        font-size: 0.6em;
+    }
+</style>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+        </script>
+    </head>
+    <body>
+        <p class="title">
+            {frontmatter.title}
+            <span class="lastUpdatedDate">最終更新日:{frontmatter.lastUpdatedDate.toString().slice(0,10)}</span>
+        </p>
+        <div class="tags">
+            <span>タグ:</span>
+            {frontmatter.tags.map((tag: string) => (
+                <Tag tag={tag}/>
+            ))}
+        </div>
+        <slot />
+    </body>
+</html>

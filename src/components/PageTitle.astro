@@ -1,0 +1,18 @@
+---
+const {title} = Astro.props
+import "../styles/global.css";
+---
+<style>
+    .page_title {
+        font-size: 1.3em;
+        color : #3e3936;
+        padding: 8px 0px 8px 8px;
+        margin-left: 0px;
+        border-left:solid 4px #5e6369 ;
+        border-bottom:solid 4px #d7d5d3 ;
+        background: #f4f2ef;
+    }
+</style>
+<div class="page_title">
+    <span>{title}</span>
+</div>

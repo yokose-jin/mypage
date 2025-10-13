@@ -1,0 +1,19 @@
+---
+const {title, link, description} = Astro.props;
+---
+
+<style>
+    .titleContent {
+        font-size: 1.2em;
+        color: #604f4f;
+        padding: 0px 0px 0px 8px;
+        margin-bottom: 20px;
+        background: #f5f3ef;
+        border-left: solid 4px #5c5754;
+    }
+</style>
+
+<div class="titleContent">
+    <span><a href={link}>{title}</a></span>
+</div>
+<p class="description">{description}</p>

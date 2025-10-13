@@ -1,0 +1,45 @@
+---
+import DisplayPost from "../../components/DisplayPost.astro";
+import "../../styles/global.css";
+
+export async function getStaticPaths() {
+    const allPosts = Object.values(import.meta.glob('../documents/posts/*.md', { eager: true }));
+    const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+    return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
+    return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+<style>
+    .icon {
+        vertical-align: middle;
+    }
+    .lastUpdatedDate {
+        font-size:0.6em;
+    }
+</style>
+<html>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</html>
+<body>
+    <p>{tag}のタグが付いた記事</p>
+    <ul>
+        <!-- {posts.map((post: any) => <DisplayPost url={post.url} title={post.frontmatter.title} lastUpdatedDate={post.frontmatter.lastUpdatedDate}/>)} -->
+        {posts.map((post:any) => (
+            <li>
+                <span class="material-icons icon">article</span>
+                <a class="docTitle" href={post.url} target="_blank" rel="noopener noreferrer">{post.frontmatter.title}</a>
+                <span class="lastUpdatedDate">最終更新日:{post.frontmatter.lastUpdatedDate.slice(0,10)}</span>
+            </li>
+            <p class="description">{post.frontmatter.description}</p>
+        ))}
+    </ul>
+</body>

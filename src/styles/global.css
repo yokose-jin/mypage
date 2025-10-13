@@ -1,0 +1,36 @@
+html::-webkit-scrollbar{
+    display:none;
+}
+html {
+    /*スクロールバー非表示（IE・Edge）*/
+    -ms-overflow-style: none;
+    /*スクロールバー非表示（Firefox）*/
+    scrollbar-width: none;
+}
+body {
+    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+    color : #4a4643;
+    background-color : #fbf9f6;
+    margin: 1em 30% 1em 1em;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+a:hover {
+    text-shadow: 1px 1px 5px #94918e8e;
+    transition: 0.3s;
+}
+li {
+    margin-top: 1em;
+}
+.description {
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+.docTitle {
+    color: #445c69;
+    border-bottom: dashed 1px #3a597d;
+    text-shadow: rgb(213, 213, 213) 0.5px 0 2px;
+}
