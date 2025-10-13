@@ -6,7 +6,11 @@ const allPosts = Object.values(import.meta.glob("../documents/posts/*.md", { eag
 const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
 const baseUrl = import.meta.env.BASE_URL;
 ---
-
+<style>
+    ul {
+        list-style-type: none;
+    }
+</style>
 <html lang="jp">
     <head>
         <meta charset="UTF-8">
