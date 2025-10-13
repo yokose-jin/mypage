@@ -24,6 +24,18 @@ const { posts } = Astro.props;
     .lastUpdatedDate {
         font-size:0.6em;
     }
+    @media screen and (min-width: 768px) {
+        body {
+            margin-top: 1em;
+            margin-left:25%;
+            margin-right:25%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        body {
+            margin: 1em 5% 1em 1em;
+        }
+    }
 </style>
 <html>
     <meta charset="utf-8">

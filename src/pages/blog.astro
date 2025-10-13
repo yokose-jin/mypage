@@ -8,6 +8,18 @@ const allPosts = await Astro.glob('./documents/posts/*.md');
     ul {
         list-style-type: none;
     }
+    @media screen and (min-width: 768px) {
+        body {
+            margin-top: 1em;
+            margin-left:25%;
+            margin-right:25%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        body {
+            margin: 1em 5% 1em 1em;
+        }
+    }
 </style>
 <html lang="jp">
 	<head>
