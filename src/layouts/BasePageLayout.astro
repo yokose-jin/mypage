@@ -2,12 +2,14 @@
 const {title,filesData} = Astro.props;
 import PageTitle from "../components/PageTitle.astro";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 // import seminarNotesData from "../data/seminarNotes.json";
 ---
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <title>{title}</title>
     </head>
     <body>
@@ -18,7 +20,7 @@ import "../styles/global.css";
                     <li>{data.category}</li>
                     <ul>
                         {data.files.map((file:any) => (
-                            <li><a class="docTitle" href={file.link} target="_blank" rel="noopener noreferrer">{file.title}</a></li>
+                            <li><a class="docTitle" href={file.link}>{file.title}</a></li>
                             <p class="description">{file.description}</p>
                         ))}
                     </ul>
@@ -26,4 +28,5 @@ import "../styles/global.css";
             }
         </ul>
     </body>
+    <Navigation/>
 </html>

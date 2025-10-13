@@ -3,16 +3,9 @@
 const { frontmatter } = Astro.props;
 import Tag from "../components/Tag.astro";
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 ---
 <style>
-    .title {
-        font-size: 1.2em;
-        margin-bottom: 0px;
-    }
-    .lastUpdatedDate {
-        font-size: 0.6em;
-        margin-top: 0px;
-    }
     @media screen and (min-width: 768px) {
         body {
             margin-top: 1em;
@@ -24,6 +17,14 @@ import "../styles/global.css";
         body {
             margin: 1em 5% 1em 1em;
         }
+    }
+    .title {
+        font-size: 1.2em;
+        margin-bottom: 0px;
+    }
+    .lastUpdatedDate {
+        font-size: 0.6em;
+        margin-top: 0px;
     }
 </style>
 <html>
@@ -46,4 +47,5 @@ import "../styles/global.css";
         </div>
         <slot />
     </body>
+    <Navigation/>
 </html>

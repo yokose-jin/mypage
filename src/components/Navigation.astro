@@ -1,0 +1,24 @@
+---
+const baseUrl = import.meta.env.BASE_URL;
+---
+<style>
+    .link {
+        /* margin: px; */
+        font-size: 0.8em;
+        border-bottom: dotted 1px rgb(195, 195, 195);
+    }
+    /* header {
+        margin-bottom: 10px;
+    } */
+    .icon {
+        font-size: 0.8em;
+    }
+</style>
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=home" /> -->
+<footer>
+    <span class="link"><a href=`${baseUrl}/`><span class="material-icons icon">home</span>ホーム</a></span>
+    <span class="link"><a href=`${baseUrl}/seminarNotes`><span class="material-icons icon">sticky_note_2</span>ゼミのノート</a></span>
+    <span class="link"><a href=`${baseUrl}/memo`><span class="material-icons icon">note_alt</span>備忘録</a></span>
+    <span class="link"><a href=`${baseUrl}/convenientSites`><span class="material-icons icon">link</span>便利なリンク集</a></span>
+    <span class="link"><a href=`${baseUrl}/blog`><span class="material-icons icon">auto_stories</span>ブログ</a></span>
+</footer>

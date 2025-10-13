@@ -1,13 +1,11 @@
 ---
 import PageTitle from "../components/PageTitle.astro";
 import DisplayPost from "../components/DisplayPost.astro";
+import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 const allPosts = await Astro.glob('./documents/posts/*.md');
 ---
 <style>
-    ul {
-        list-style-type: none;
-    }
     @media screen and (min-width: 768px) {
         body {
             margin-top: 1em;
@@ -19,6 +17,9 @@ const allPosts = await Astro.glob('./documents/posts/*.md');
         body {
             margin: 1em 5% 1em 1em;
         }
+    }
+    ul {
+        list-style-type: none;
     }
 </style>
 <html lang="jp">
@@ -35,4 +36,5 @@ const allPosts = await Astro.glob('./documents/posts/*.md');
             ))}
         </ul>
 	</body>
+    <Navigation/>
 </html>

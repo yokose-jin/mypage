@@ -10,14 +10,16 @@ import "../styles/global.css";
     .icon {
         vertical-align: middle;
     }
+    .tags {
+        margin-top:0px;
+    }
 </style>
 <li>
     <span class="material-icons icon">article</span>
-    <a class="docTitle" href={url} target="_blank" rel="noopener noreferrer">{title}</a>
+    <a class="docTitle" href={url}>{title}</a>
 </li>
 <span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
-<p>
-    <!-- <span>タグ:</span> -->
+<p class="tags">
     {(tags ?? []).map((tag:string)=>(<Tag tag={tag}/>))}
 </p>
 <p class="description">{description}</p>

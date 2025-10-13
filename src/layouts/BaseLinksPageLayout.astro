@@ -1,6 +1,7 @@
 ---
 const {title,filesData} = Astro.props;
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 // import seminarNotesData from "../data/seminarNotes.json";
 ---
 <style>
@@ -31,6 +32,7 @@ import "../styles/global.css";
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <title>{title}</title>
     </head>
     <body>
@@ -51,4 +53,5 @@ import "../styles/global.css";
             }
         </ul>
     </body>
+    <Navigation/>
 </html>

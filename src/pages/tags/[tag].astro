@@ -18,12 +18,6 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 <style>
-    .icon {
-        vertical-align: middle;
-    }
-    .lastUpdatedDate {
-        font-size:0.6em;
-    }
     @media screen and (min-width: 768px) {
         body {
             margin-top: 1em;
@@ -35,6 +29,12 @@ const { posts } = Astro.props;
         body {
             margin: 1em 5% 1em 1em;
         }
+    }
+    .icon {
+        vertical-align: middle;
+    }
+    .lastUpdatedDate {
+        font-size:0.6em;
     }
 </style>
 <html>
@@ -48,7 +48,7 @@ const { posts } = Astro.props;
         {posts.map((post:any) => (
             <li>
                 <span class="material-icons icon">article</span>
-                <a class="docTitle" href={post.url} target="_blank" rel="noopener noreferrer">{post.frontmatter.title}</a>
+                <a class="docTitle" href={post.url}>{post.frontmatter.title}</a>
                 <span class="lastUpdatedDate">最終更新日:{post.frontmatter.lastUpdatedDate.slice(0,10)}</span>
             </li>
             <p class="description">{post.frontmatter.description}</p>
