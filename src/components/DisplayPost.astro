@@ -14,10 +14,10 @@ import "../styles/global.css";
 <li>
     <span class="material-icons icon">article</span>
     <a class="docTitle" href={url} target="_blank" rel="noopener noreferrer">{title}</a>
-    <span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
 </li>
+<span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
 <p>
-    <span>タグ:</span>
+    <!-- <span>タグ:</span> -->
     {(tags ?? []).map((tag:string)=>(<Tag tag={tag}/>))}
 </p>
 <p class="description">{description}</p>

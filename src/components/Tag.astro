@@ -1,5 +1,6 @@
 ---
 const {tag} = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 <style>
     a {
@@ -18,4 +19,4 @@ const {tag} = Astro.props;
         border-left: solid 6px rgb(87, 83, 79);
     }
 </style>
-<span class="tag"><a href={`/tags/${tag}`}>{tag}</a></span>
+<span class="tag"><a href={`${baseUrl}/tags/${tag}`}>{tag}</a></span>

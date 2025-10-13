@@ -6,10 +6,12 @@ import "../styles/global.css";
 ---
 <style>
     .title {
-        font-size: 1.3em;
+        font-size: 1.2em;
+        margin-bottom: 0px;
     }
     .lastUpdatedDate {
         font-size: 0.6em;
+        margin-top: 0px;
     }
 </style>
 <html>
@@ -22,12 +24,10 @@ import "../styles/global.css";
         </script>
     </head>
     <body>
-        <p class="title">
-            {frontmatter.title}
-            <span class="lastUpdatedDate">最終更新日:{frontmatter.lastUpdatedDate.toString().slice(0,10)}</span>
-        </p>
+        <p class="title">{frontmatter.title}</p>
+        <span class="lastUpdatedDate">最終更新日:{frontmatter.lastUpdatedDate.toString().slice(0,10)}</span>
         <div class="tags">
-            <span>タグ:</span>
+            <!-- <span>タグ:</span> -->
             {frontmatter.tags.map((tag: string) => (
                 <Tag tag={tag}/>
             ))}
