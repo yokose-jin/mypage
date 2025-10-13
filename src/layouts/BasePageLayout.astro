@@ -1,8 +1,10 @@
 ---
-const {title,filesData} = Astro.props;
 import PageTitle from "../components/PageTitle.astro";
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import he from "he";
+const {title,filesData} = Astro.props;
+
 // import seminarNotesData from "../data/seminarNotes.json";
 ---
 <html lang="en">
@@ -21,7 +23,7 @@ import Navigation from "../components/Navigation.astro";
                     <ul>
                         {data.files.map((file:any) => (
                             <li><a class="docTitle" href={file.link}>{file.title}</a></li>
-                            <p class="description">{file.description}</p>
+                            <p class="description">{he.decode(file.description)}</p>
                         ))}
                     </ul>
                 ))

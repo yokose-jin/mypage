@@ -3,6 +3,7 @@
 import Tag from "../components/Tag.astro";
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
+import "katex/dist/katex.min.css";
 const { frontmatter } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 ---
@@ -26,10 +27,6 @@ const baseUrl = import.meta.env.BASE_URL;
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
-        </script>
         <title>{frontmatter.title}</title>
     </head>
     <body>

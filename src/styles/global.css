@@ -40,6 +40,23 @@ li {
     box-shadow: -3px 0px;
 }
 @media screen and (min-width: 637px) {
+    code {
+        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
+        font-size: 1.2em;
+        padding: 0.15em 0.3em;
+        border-radius: 4px;
+    }
+    pre {
+        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
+        border-radius: 8px;
+        padding: 1em;
+        overflow-x: auto;
+    }
+    pre code {
+        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
+        /* background-color: #eeeeee; */
+        font-size: 1.1em;
+    }
     body {
         margin-top: 1em;
         margin-left:25%;
@@ -47,7 +64,23 @@ li {
     }
 }
 @media screen and (max-width: 636px) {
+    code {
+        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
+        font-size: 1.2em;
+        padding: 0.15em 0.3em;
+        border-radius: 4px;
+    }
+    pre {
+        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
+        border-radius: 8px;
+        padding: 1em;
+        overflow-x: auto;
+    }
+    pre code {
+        font-size: 1.1em;
+    }
     body {
+        font-size: 0.9em;
         margin: 1em 5% 1em 1em;
     }
     .description {
