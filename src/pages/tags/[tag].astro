@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 <style>
     .icon {
@@ -27,6 +28,31 @@ const { posts } = Astro.props;
     ul {
         list-style-type: none;
     }
+    .goAllTags {
+        padding: 5px;
+        background: #f5f1ef;
+        border-left: solid 4px #4f4a41;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        font-size: 0.8em;
+    }
+    .icon {
+        vertical-align: middle;
+        font-size: 0.9em;
+        margin-right: 2px;
+    }
+    .tag {
+        box-shadow: 1px 1px 2px #dedcdc;
+        background: #fbf9f6;
+        /* margin-right: 8px; */
+        vertical-align: middle;
+        padding: 5px;
+        font-size: 0.8em;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 </style>
 <html lang="jp">
     <head>
@@ -36,7 +62,12 @@ const { posts } = Astro.props;
         <title>{tag}</title>
     </head>
     <body>
-        <p>{tag}のタグが付いた記事</p>
+        <span class="goAllTags">
+            <a href=`${baseUrl}/tags`>タグ一覧へ</a>
+        </span>
+        <p>タグ
+            <span class="tag"><span class="material-icons icon">local_offer</span><a href={`${baseUrl}/tags/${tag}`}>{tag}</a></span>
+            が付いた記事</p>
         <ul>
             <!-- {posts.map((post: any) => <DisplayPost url={post.url} title={post.frontmatter.title} lastUpdatedDate={post.frontmatter.lastUpdatedDate}/>)} -->
             {posts.map((post:any) => (

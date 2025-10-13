@@ -16,11 +16,10 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 a:hover {
-    text-shadow: 1px 1px 5px #b2b0af8e;
-    transition: 0.3s;
+    text-shadow: 1px 1px 5px #b2b0afaa;
 }
 li {
     margin-top: 1em;

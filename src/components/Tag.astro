@@ -7,16 +7,20 @@ const baseUrl = import.meta.env.BASE_URL;
         text-decoration: none;
         color: #3d566d;
     }
+    .icon {
+        vertical-align: middle;
+        font-size: 0.9em;
+        margin-right: 2px;
+    }
     .tag {
-        box-shadow: 1px 1px 4px #d1d1d1;
+        box-shadow: 1px 1px 2px #dedcdc;
         background: #fbf9f6;
-        margin-right: 10px;
+        margin-right: 8px;
         padding: 5px;
         font-size: 0.8em;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         border-bottom-left-radius: 5px;
-        border-left: solid 6px rgb(87, 83, 79);
     }
 </style>
-<span class="tag"><a href={`${baseUrl}/tags/${tag}`}>{tag}</a></span>
+<span class="tag"><span class="material-icons icon">local_offer</span><a href={`${baseUrl}/tags/${tag}`}>{tag}</a></span>

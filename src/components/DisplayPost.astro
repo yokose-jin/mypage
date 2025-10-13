@@ -2,7 +2,7 @@
 import Tag from "../components/Tag.astro";
 import "../styles/global.css";
 const {url,title,description,lastUpdatedDate,tags} = Astro.props;
-const baseUrl = import.meta.env.BASE_URL;
+
 ---
 <style>
 	.lastUpdatedDate {
@@ -11,22 +11,27 @@ const baseUrl = import.meta.env.BASE_URL;
     .icon {
         vertical-align: middle;
     }
-    .goAllTags {
+    /* .goAllTags {
+        display:flex;
         font-size: 0.4em;
+        margin-left:0px;
         color: rgb(129, 78, 71);
         vertical-align: bottom;
-    }
+    } */
     .tags {
-        margin-top:0px;
+        display:flex;
+        flex-wrap: wrap;
+        vertical-align: middle;
+        margin-top:5px;
     }
 </style>
 <li>
     <span class="material-icons icon">article</span>
     <a class="docTitle" href={url}>{title}</a>
+    <span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
+    <span class="tags">
+        {(tags ?? []).map((tag:string)=>(<Tag tag={tag}/>))}
+        
+    </span>
+    <p class="description">{description}</p>
 </li>
-<span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
-<p class="tags">
-    {(tags ?? []).map((tag:string)=>(<Tag tag={tag}/>))}
-    <span class="goAllTags"><a href=`${baseUrl}/tags`>タグ一覧へ</a></span>
-</p>
-<p class="description">{description}</p>
