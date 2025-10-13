@@ -19,7 +19,7 @@ a {
     transition: 0.2s;
 }
 a:hover {
-    text-shadow: 1px 1px 5px #94918e8e;
+    text-shadow: 1px 1px 5px #b2b0af8e;
     transition: 0.3s;
 }
 li {
@@ -58,7 +58,7 @@ li {
         font-size: 1.1em;
     }
     body {
-        margin-top: 1em;
+        margin-top: 2em;
         margin-left:25%;
         margin-right:25%;
     }
@@ -81,7 +81,7 @@ li {
     }
     body {
         font-size: 0.9em;
-        margin: 1em 5% 1em 1em;
+        margin: 2em 5% 1em 1em;
     }
     .description {
         font-size: 0.8em;
