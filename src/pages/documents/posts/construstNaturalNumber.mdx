@@ -5,6 +5,12 @@ lastUpdatedDate: 2025-10-13
 description: "Haskellの型システムを用いて自然数を構成します。"
 tags: ["型で数を作る","型","Haskell"]
 ---
+import Def from "../../../latexEnvs/Def.astro";
+import Proof from "../../../latexEnvs/Proof.astro";
+import Prop from "../../../latexEnvs/Prop.astro";
+import Lemma from "../../../latexEnvs/Lemma.astro";
+import Theorem from "../../../latexEnvs/Theorem.astro";
+
 この記事の目標は、Haskellの型システムを使って自然数を型レベルで構成することである。
 その為、プログラムの意図が伝わることを意識し、形式的で厳密な議論は避けた部分がある。その詳細についてはいつか(自分が生きている間とは限らないが)記事にしようと思う。
 なお、この記事では、Haskellの基本的な文法は仮定した。(Haskellの文法が分からないと記事が読めないのならプログラムの意図も伝わらない、と指摘されれば、返す言葉がありません)
@@ -15,8 +21,7 @@ tags: ["型で数を作る","型","Haskell"]
 
 自然数を自然数たらしめる本質的な性質を見事に捉え、公理化したのが次に述べるPeanoの公理である。
 
-__$\blacktriangleright$定義. (Peano系)__
-
+<Def title="Peano系">
 集合$N$に対し、三つ組($N,s,0$)が以下の条件を満たすとき、これをPeano系という。
 
 >(P1). $0\in N$である。
@@ -30,6 +35,8 @@ __$\blacktriangleright$定義. (Peano系)__
 >(P5). $N$の部分集合$S$が $0\in S\wedge (x\in S \Rightarrow s(n)\in S)$を満たすとき、$S=N$となる。
 
 この(P1)から(P5)の条件をPeanoの公理という。
+</Def>
+
 
 例えば、我々がよく知っている自然数全体の集合$\mathbb{N}$に対し、写像$s:\mathbb{N}\to \mathbb{N}$を$s(n)=n+1$と定めれば、三つ組$(\mathbb{N},s,0)$はPeano系である。
 ただし、自然数を定義しようという流れの中では、まだ$\mathbb{N}$を使うことはできないので、これは実際にはPeano系を構成しているわけではないことに注意する。

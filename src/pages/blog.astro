@@ -3,7 +3,8 @@ import PageTitle from "../components/PageTitle.astro";
 import DisplayPost from "../components/DisplayPost.astro";
 import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
-const allPosts = await Astro.glob('./documents/posts/*.md');
+const allPosts = await Astro.glob('./documents/posts/*.mdx');
+// const allPosts = await Astro.glob('./documents/posts/*.md');
 ---
 <style>
     ul {

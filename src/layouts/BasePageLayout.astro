@@ -17,19 +17,6 @@ const {title,filesData,isPageType} = Astro.props;
     <body>
         <Navigation/>
         <PageTitle title={title}/>
-        <!-- <ul>
-            {
-                filesData.map((data:any) => (
-                    <li>{data.category}</li>
-                    <ul>
-                        {data.files.map((file:any) => (
-                            <li><a class="docTitle" href={file.link}>{file.title}</a></li>
-                            <p class="description">{he.decode(file.description)}</p>
-                        ))}
-                    </ul>
-                ))
-            }
-        </ul> -->
         {(isPageType == "links") ?
         (<ul>
             {

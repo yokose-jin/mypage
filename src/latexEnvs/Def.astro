@@ -1,0 +1,28 @@
+---
+const {title} = Astro.props;
+---
+<style>
+    .def {
+        font-weight: bold;
+    }
+    .findef {
+        display: block;
+        text-align:right;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    /* .maintext {
+        background: #fcfbf7;
+        box-shadow: 1px 1px 4px rgb(235, 235, 235);
+        padding: 3px;
+        border-radius: 2px;
+    } */
+</style>
+
+<div class="maintext">
+    <span class="def">&#9655;定義</span>{title && <span> ({title})</span>}
+    <dev>
+        <slot/>
+        <span class="findef">&#9825;</span>
+    </dev>
+</div>
