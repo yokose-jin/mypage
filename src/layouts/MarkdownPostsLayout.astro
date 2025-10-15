@@ -12,6 +12,7 @@ const baseUrl = import.meta.env.BASE_URL;
     .title {
         font-size: 1.3em;
         margin-bottom: 0px;
+        margin-top: 20px;
         text-align: center;
     }
     .lastUpdatedDate {
@@ -30,6 +31,9 @@ const baseUrl = import.meta.env.BASE_URL;
         padding-bottom: 15px;
         border-bottom: dashed 1px rgb(148, 148, 148);
     }
+    /* body {
+        margin-bottom: 200px;
+    } */
 </style>
 <html>
     <head>
@@ -39,6 +43,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <title>{frontmatter.title}</title>
     </head>
     <body>
+        <Navigation/>
         <div class="markdownFormatter">
             <p class="title">&mdash; {frontmatter.title} &mdash;</p>
             <span class="lastUpdatedDate">最終更新日:{frontmatter.lastUpdatedDate.toString().slice(0,10)}</span>
@@ -51,5 +56,4 @@ const baseUrl = import.meta.env.BASE_URL;
         </div>
         <slot />
     </body>
-    <Navigation/>
 </html>

@@ -11,6 +11,7 @@ body {
     font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
     color : #4a4643;
     background-color : #fbf9f6;
+    margin-bottom: 200px;
     /* margin: 1em 30% 1em 1em; */
 }
 a {

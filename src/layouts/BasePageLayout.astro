@@ -15,6 +15,7 @@ const {title,filesData} = Astro.props;
         <title>{title}</title>
     </head>
     <body>
+        <Navigation/>
         <PageTitle title={title}/>
         <ul>
             {
@@ -30,5 +31,4 @@ const {title,filesData} = Astro.props;
             }
         </ul>
     </body>
-    <Navigation/>
 </html>

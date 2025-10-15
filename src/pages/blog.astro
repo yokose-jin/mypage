@@ -17,6 +17,7 @@ const allPosts = await Astro.glob('./documents/posts/*.md');
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 		<title>ブログ</title>
 	</head>
+    <Navigation/>
 	<body>
         <PageTitle title="ブログ"/>
         <ul>
@@ -25,5 +26,4 @@ const allPosts = await Astro.glob('./documents/posts/*.md');
             ))}
         </ul>
 	</body>
-    <Navigation/>
 </html>

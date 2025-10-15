@@ -10,6 +10,10 @@ const baseUrl = import.meta.env.BASE_URL;
     ul {
         list-style-type: none;
     }
+    .title {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 </style>
 <html lang="jp">
     <head>
@@ -18,11 +22,11 @@ const baseUrl = import.meta.env.BASE_URL;
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
         <title>タグ一覧</title>
     </head>
+    <Navigation/>
     <body>
-        <p>タグ一覧</p>
+        <p class="title">タグ一覧</p>
         <ul class="tags">
             {uniqueTags.map((tag) =><li> <Tag tag={tag}/></li>)}
         </ul>
     </body>
-    <Navigation/>
 </html>

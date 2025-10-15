@@ -72,9 +72,9 @@ Succ (Succ (Succ Zero)) == Succ (Succ Zero)
 ```
 を判定したかったとする。このとき、`==`の定義から、これは両辺から外側の`Succ`を省いた`Succ (Succ Zero) == Succ Zero`と同値である。また同様に、これは`Succ Zero == Zero`と同値になる。これは`False`であると定義したので、元の式`Succ (Succ (Succ Zero)) == Succ (Succ Zero)`も`False`になる。
 
-もうこの段階で、`(Nat,Succ,Zero)`が(P3)と(P4)の条件を満たし、したがってこれがPeano系になることが示せる。実際、(P3)は等号の定義`(Succ _) == Zero = False Zero == (Succ _) = False`から示せるし、また、(P4)は等号の定義`(Succ m) == (Succ n) = m == n`から示せる。
+もうこの段階で、`(Nat,Succ,Zero)`が(P3)と(P4)の条件を満たし、したがってこれがPeano系になることが示せる。実際、(P3)は等号の定義`(Succ _) == Zero = False`と`Zero == (Succ _) = False`から示せるし、また、(P4)は等号の定義`(Succ m) == (Succ n) = m == n`から示せる。
 #### ・順序を入れる
-さて、次は`Nat`に順序を入れる、即ち`Nat`を`Ord`型クラスのインスタンスにしよう。`Ord`型クラスのインスタンスにするには、`Nat`に対して`compare`関数を定めればよい。`Nat`上の順序は、二つの`Nat`の値`Succ (Succ (Succ ...))`と`Succ (Succ (Succ ...))`があったとき、外側の`Succ`の個数が多ければそちらが値として大きいと考えるのが自然である。では、これも等号の時と同じように`Zero`を含む式から始めて実装する。
+さて、次は`Nat`に順序を入れる、即ち`Nat`を`Ord`型クラスのインスタンスにする。`Ord`型クラスのインスタンスにするには、`Nat`に対して`compare`関数を定めればよい。`Nat`上の順序は、二つの`Nat`の値`Succ (Succ (Succ ...))`と`Succ (Succ (Succ ...))`があったとき、外側の`Succ`の個数が多ければそちらが値として大きいと考えるのが自然である。では、これも等号の時と同じように`Zero`を含む式から始めて実装する。
 ```haskell
 instance Ord Nat where
     compare Zero Zero = EQ
@@ -144,7 +144,7 @@ Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Zero)))))
 ```
 となり、確かに欲しい結果が得られた。
 ### 最後に
-以上でHaskellの型システムを用いて自然数を定義することができた。プログラムの全体は以下に記す：
+以上でHaskellの型システムを用いて自然数を定義することができた。プログラムの全体を以下に記す：
 ```haskell
 data Nat = Zero | Succ Nat deriving(Show)
 
