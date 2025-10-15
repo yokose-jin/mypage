@@ -1,7 +1,6 @@
 ---
-import DisplayPost from "../../components/DisplayPost.astro";
 import "../../styles/global.css";
-
+import Navigation from "../../components/Navigation.astro";
 export async function getStaticPaths() {
     const allPosts = Object.values(import.meta.glob('../documents/posts/*.md', { eager: true }));
     const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
@@ -28,14 +27,19 @@ const baseUrl = import.meta.env.BASE_URL;
     ul {
         list-style-type: none;
     }
-    .goAllTags {
+    /* .goAllTags {
         padding: 5px;
-        background: #f5f1ef;
+        background: #f5f4f3;
         border-left: solid 4px #4f4a41;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
+        box-shadow: 1px 1px 4px #d3d3d3;
         font-size: 0.8em;
+    } */
+    .goAllTags {
+        font-size: 0.4em;
+        color: rgb(129, 78, 71);
+        vertical-align: bottom;
     }
     .icon {
         vertical-align: middle;
@@ -62,6 +66,7 @@ const baseUrl = import.meta.env.BASE_URL;
         <title>{tag}</title>
     </head>
     <body>
+        <Navigation/>
         <span class="goAllTags">
             <a href=`${baseUrl}/tags`>タグ一覧へ</a>
         </span>
