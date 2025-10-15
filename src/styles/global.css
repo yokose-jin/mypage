@@ -47,7 +47,7 @@ pre {
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
 }
-@media screen and (min-width: 637px) {
+@media screen and (min-width: 768px) {
     code {
         /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
         font-size: 1.2em;
@@ -67,11 +67,11 @@ pre {
     }
     body {
         margin-top: 1em;
-        margin-left:25%;
-        margin-right:25%;
+        margin-left:20%;
+        margin-right:20%;
     }
 }
-@media screen and (max-width: 636px) {
+@media screen and (max-width: 767px) {
     code {
         /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
         font-size: 1.2em;

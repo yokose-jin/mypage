@@ -1,0 +1,16 @@
+h3 {
+    /* margin:10px; */
+    padding-left: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-left:solid 4px rgb(100, 91, 84);
+    /* background: #f6f3ee; */
+}
+h4 {
+    padding-bottom: 5px;
+    margin-left: 14px;
+    border-bottom: solid 1px #f6f3ee;
+}
+p {
+    margin:10px;
+}

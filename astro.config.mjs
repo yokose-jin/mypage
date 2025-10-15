@@ -12,7 +12,9 @@ export default defineConfig({
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
         shikiConfig: {
-        theme: "material-theme-palenight",
+        // theme: "material-theme-palenight",
+        theme: "material-theme",
+        // theme: "monokai",
         },
     }
 });
