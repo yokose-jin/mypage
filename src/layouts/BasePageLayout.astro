@@ -3,7 +3,7 @@ import PageTitle from "../components/PageTitle.astro";
 import "../styles/global.css";
 import Navigation from "../components/Navigation.astro";
 import he from "he";
-const {title,filesData} = Astro.props;
+const {title,filesData,isPageType} = Astro.props;
 
 // import seminarNotesData from "../data/seminarNotes.json";
 ---
@@ -17,7 +17,7 @@ const {title,filesData} = Astro.props;
     <body>
         <Navigation/>
         <PageTitle title={title}/>
-        <ul>
+        <!-- <ul>
             {
                 filesData.map((data:any) => (
                     <li>{data.category}</li>
@@ -29,6 +29,35 @@ const {title,filesData} = Astro.props;
                     </ul>
                 ))
             }
-        </ul>
+        </ul> -->
+        {(isPageType == "links") ?
+        (<ul>
+            {
+                filesData.map((data:any) => (
+                    <li>{data.category}</li>
+                    <ul>
+                        {data.files.map((file:any) => (
+                            <li><a class={(file.titleLang == "en") ? "enTitle" : "jpTitle"} href={file.link}  target="_blank" rel="noopener noreferrer">{file.title}</a></li>
+                            <p class="description">{file.description}</p>
+                        ))}
+                    </ul>
+                ))
+            }
+        </ul>)
+        :
+        (<ul>
+            {
+                filesData.map((data:any) => (
+                    <li>{data.category}</li>
+                    <ul>
+                        {data.files.map((file:any) => (
+                            <li><a class="docTitle" href={file.link}>{file.title}</a></li>
+                            <p class="description">{he.decode(file.description)}</p>
+                        ))}
+                    </ul>
+                ))
+            }
+        </ul>)
+        }
     </body>
 </html>

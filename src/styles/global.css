@@ -12,7 +12,6 @@ body {
     color : #4a4643;
     background-color : #fbf9f6;
     margin-bottom: 200px;
-    /* margin: 1em 30% 1em 1em; */
 }
 a {
     text-decoration: none;
@@ -39,6 +38,19 @@ li {
     padding: 0px 0px 0px 8px;
     box-shadow: -3px 0px;
 }
+.jpTitle {
+    color: #9d4a4a;
+    border-bottom: dashed 1px #9d4a4a;
+    text-shadow: rgb(204, 203, 203) 1px 0 2px;
+    word-break: break-all;
+}
+.enTitle {
+    color: #9d4a4a;
+    font-family: 'Courier',sans-serif;
+    border-bottom: dashed 1px #9d4a4a;
+    text-shadow: rgb(204, 203, 203) 1px 0 2px;
+    word-break: break-all;
+}
 pre::-webkit-scrollbar{
     display:none;
 }
@@ -50,20 +62,16 @@ pre {
 }
 @media screen and (min-width: 768px) {
     code {
-        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
         font-size: 1.2em;
         padding: 0.15em 0.3em;
         border-radius: 4px;
     }
     pre {
-        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
         border-radius: 8px;
         padding: 1em;
         overflow-x: auto;
     }
     pre code {
-        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
-        /* background-color: #eeeeee; */
         font-size: 1.1em;
     }
     body {
@@ -74,13 +82,11 @@ pre {
 }
 @media screen and (max-width: 767px) {
     code {
-        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
         font-size: 1.2em;
         padding: 0.15em 0.3em;
         border-radius: 4px;
     }
     pre {
-        /* font-family: "Latin Modern Mono", "Computer Modern Typewriter", monospace; */
         border-radius: 8px;
         padding: 1em;
         overflow-x: auto;
