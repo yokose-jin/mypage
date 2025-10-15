@@ -60,7 +60,8 @@ pre {
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
 }
-@media screen and (min-width: 768px) {
+/* pc */
+@media screen and (min-width: 1030px) {
     code {
         font-size: 1.2em;
         padding: 0.15em 0.3em;
@@ -80,7 +81,75 @@ pre {
         margin-right:20%;
     }
 }
-@media screen and (max-width: 767px) {
+
+/* ipad mini */
+@media screen and (min-width: 741px) and (max-width: 800px) {
+    code {
+        font-size: 1.15em;
+        padding: 0.15em 0.3em;
+        border-radius: 4px;
+    }
+    pre {
+        border-radius: 8px;
+        padding: 1em;
+        overflow-x: auto;
+    }
+    pre code {
+        font-size: 1.15em;
+    }
+    body {
+        font-size: 1.15em;
+        margin-top: 1em;
+        margin-left:5%;
+        margin-right:5%;
+    }
+}
+/* ipad 11 */
+@media screen and (min-width: 741px) and (max-width: 1030px) {
+    code {
+        font-size: 1.3em;
+        padding: 0.15em 0.3em;
+        border-radius: 4px;
+    }
+    pre {
+        border-radius: 8px;
+        padding: 1em;
+        overflow-x: auto;
+    }
+    pre code {
+        font-size: 1.25em;
+    }
+    body {
+        font-size: 1.25em;
+        margin-top: 1em;
+        margin-left:5%;
+        margin-right:5%;
+    }
+}
+/* ipad 13 */
+@media screen and (min-width: 1020px) and (max-width: 1030px) {
+    code {
+        font-size: 1.3em;
+        padding: 0.15em 0.3em;
+        border-radius: 4px;
+    }
+    pre {
+        border-radius: 8px;
+        padding: 1em;
+        overflow-x: auto;
+    }
+    pre code {
+        font-size: 1.25em;
+    }
+    body {
+        font-size: 1.25em;
+        margin-top: 1em;
+        margin-left:5%;
+        margin-right:5%;
+    }
+}
+/* iphone */
+@media screen and (max-width: 740px) {
     code {
         font-size: 1.2em;
         padding: 0.15em 0.3em;
