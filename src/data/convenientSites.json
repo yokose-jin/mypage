@@ -71,7 +71,7 @@
                 "title": "Astro",
                 "titleLang": "en",
                 "link": "https://docs.astro.build/ja/getting-started/",
-                "description": "いま流行り(？)のAstroの公式レファレンス。かなり親切な説明書。このサイトもAstroで作ってる。"
+                "description": "いま流行り(？)のAstroの公式リファレンス。かなり親切な説明書。このサイトもAstroで作ってる。"
             },
             {
                 "title": "Haskellでの型レベルプログラミング",

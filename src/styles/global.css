@@ -8,8 +8,9 @@ html {
     scrollbar-width: none;
 }
 body {
-    font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
-    color : #4a4643;
+    /* font-family: "Shippori Mincho B1", serif; */
+    font-family: "Noto Serif JP", serif;
+    color : #554f4a;
     background-color : #fbf9f6;
     margin-bottom: 200px;
 }
@@ -31,7 +32,7 @@ li {
 .docTitle {
     color: #445c69;
     border-bottom: dashed 1px #3a597d;
-    text-shadow: rgb(213, 213, 213) 0.5px 0 2px;
+    text-shadow: rgb(230, 230, 230) 0.5px 0 2px;
 }
 .prefaceTitle {
     font-size: 1.2em;
