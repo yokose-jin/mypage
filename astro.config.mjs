@@ -9,14 +9,15 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
     site: 'https://yokose-jin.github.io',
     base: '/mypage',
-    integrations: [mdx()],
-    markdown: {
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
-        shikiConfig: {
-        // theme: "material-theme-palenight",
-        theme: "material-theme",
-        // theme: "monokai",
-        },
-    }
+    integrations: [
+        mdx({
+                remarkPlugins: [remarkMath],
+                rehypePlugins: [rehypeKatex],
+                shikiConfig: {
+                // theme: "material-theme-palenight",
+                theme: "material-theme",
+                // theme: "monokai",
+                },
+            }
+        )]
 });

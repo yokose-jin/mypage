@@ -51,6 +51,10 @@ li {
     text-shadow: rgb(204, 203, 203) 1px 0 2px;
     word-break: break-all;
 }
+.katex-html {
+    margin-left:4px;
+    margin-right:4px;
+}
 pre::-webkit-scrollbar{
     display:none;
 }
