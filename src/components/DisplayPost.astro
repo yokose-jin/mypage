@@ -14,10 +14,11 @@ const {url,title,description,lastUpdatedDate,tags} = Astro.props;
         vertical-align: middle;
     }
     .tags {
-        display:flex;
-        flex-wrap: wrap;
+        /* display:flex; */
+        /* flex-wrap: wrap; */
         vertical-align: middle;
-        margin-top:5px;
+        padding-top:10px;
+        padding-bottom: 10px;
     }
     .description {
         margin-top: 0px;
@@ -27,9 +28,9 @@ const {url,title,description,lastUpdatedDate,tags} = Astro.props;
     <span class="material-icons icon">article</span>
     <a class="docTitle" href={url}>{title}</a>
     <span class="lastUpdatedDate">最終更新日:{lastUpdatedDate.slice(0,10)}</span>
-    <span class="tags">
+    <div class="tags scroll">
         {(tags ?? []).map((tag:string)=>(<Tag tag={tag}/>))}
         
-    </span>
+    </div>
     <p class="description">{description}</p>
 </li>
