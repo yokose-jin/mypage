@@ -117,13 +117,37 @@ Grothendieck群の構成は、次の圏論的な意味で自然である。つ�
 $M$を可換モノイド、$\iota:M\longrightarrow G(M)$を自然な射とする。このとき、任意の可換群$N$とモノイド準同型$f:M\longrightarrow N$に対して、$\widetilde{f}\circ \iota=f$となるようなモノイド準同型$\widetilde{f}:G(M)\longrightarrow N$が一意に存在する。
 </Prop>
 <Proof>
-任意の可換群$N$とモノイド準同型$f:M\longrightarrow N$に対して、$\widetilde{f}:G(M)\longrightarrow N$を$\widetilde{f}(\overline{(m,n)}):=f(m)-f(n)$と定めれば、これはwell-definedなモノイド準同型となる。
+任意の可換群$N$とモノイド準同型$f:M\longrightarrow N$に対して、
+<Center>
+$\widetilde{f}:G(M)\longrightarrow N$を$\widetilde{f}(\overline{(m,n)}):=f(m)-f(n)$
+</Center>
+と定めれば、これはwell-definedなモノイド準同型となる。
 実際、$\overline{(m_1,n_1)}=\overline{(m_2,n_2)}$であれば、ある$k\in M$が存在して$m_1+n_2+k=m_2+n_1+k$となり、これに$f$を適応すると、$f$がモノイド準同型であることと$N$が群であることから$f(m_1)-f(n_1)=f(m_2)-f(n_2)$を得る。よって、$\widetilde{f}$はwell-definedである。
 また、任意の$\overline{(m_1,n_1)},\overline{(m_2,n_2)}\in G(M)$に対して
-$\widetilde{f}(\overline{(m_1,n_1)}+\overline{(m_2,n_2)})=\widetilde{f}(\overline{(m_1+m_2,n_1+n_2)})=f(m_1+m_2)-f(n_1+n_2)=(f(m_1)-f(n_1))+(f(m_2)-f(n_2))=\widetilde{f}(\overline{(m_1,n_1)})+\widetilde{f}(\overline{(m_2,n_2)})$が成り立つので、$\widetilde{f}$はモノイド準同型である。
+$$
+\begin{align*}
+\widetilde{f}(\overline{(m_1,n_1)}+\overline{(m_2,n_2)})&=\widetilde{f}(\overline{(m_1+m_2,n_1+n_2)})\\
+                                                        &=f(m_1+m_2)-f(n_1+n_2) \\
+                                                        &=(f(m_1)-f(n_1))+(f(m_2)-f(n_2)) \\
+                                                        &=\widetilde{f}(\overline{(m_1,n_1)})+\widetilde{f}(\overline{(m_2,n_2)})
+\end{align*}
+$$
+が成り立つので、$\widetilde{f}$はモノイド準同型である。
 
 また、モノイド準同型$g:G(M)\longrightarrow N$が$g\circ \iota=f$を満足するとき、
-任意の$\overline{(m,n)}\in G(M)$に対して$g(\overline{(m,n)})=g(\overline{(m,0)}+\overline{(0,n)})=g(\overline{(m,0)}-\overline{(n,0)})=g(\overline{(m,0)})-g(\overline{(n,0)})=g(\iota(m))-g(\iota(n))=f(m)-f(n)=\widetilde{f}(\overline{(m,n)})$即ち$g=\widetilde{f}$となる。
+任意の$\overline{(m,n)}\in G(M)$に対して
+$$
+\begin{align*}
+
+g(\overline{(m,n)})&=g(\overline{(m,0)}+\overline{(0,n)}) \\
+                    &=g(\overline{(m,0)}-\overline{(n,0)}) \\
+                    &=g(\overline{(m,0)})-g(\overline{(n,0)})\\
+                    &=g(\iota(m))-g(\iota(n))\\
+                    &=f(m)-f(n)\\
+                    &=\widetilde{f}(\overline{(m,n)})
+\end{align*}
+$$
+が成り立つので、$g=\widetilde{f}$となる。
 
 ここで、任意の群$G,H$とその間のモノイド準同型$f:G\longrightarrow H$に対し、$f(-x)=-f(x)$が成り立つことを用いた。
 </Proof>
