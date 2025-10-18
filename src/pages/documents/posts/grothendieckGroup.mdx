@@ -125,7 +125,7 @@ $\widetilde{f}:G(M)\longrightarrow N$を$\widetilde{f}(\overline{(m,n)}):=f(m)-f
 と定めれば、これはwell-definedなモノイド準同型となる。
 実際、$\overline{(m_1,n_1)}=\overline{(m_2,n_2)}$であれば、ある$k\in M$が存在して$m_1+n_2+k=m_2+n_1+k$となり、これに$f$を適応すると、$f$がモノイド準同型であることと$N$が群であることから$f(m_1)-f(n_1)=f(m_2)-f(n_2)$を得る。よって、$\widetilde{f}$はwell-definedである。
 また、任意の$\overline{(m_1,n_1)},\overline{(m_2,n_2)}\in G(M)$に対して
-<span class="scroll">
+<div class="scroll">
 $$
 \begin{align*}
 \widetilde{f}(\overline{(m_1,n_1)}+\overline{(m_2,n_2)})&=\widetilde{f}(\overline{(m_1+m_2,n_1+n_2)})\\
@@ -134,7 +134,7 @@ $$
                                                         &=\widetilde{f}(\overline{(m_1,n_1)})+\widetilde{f}(\overline{(m_2,n_2)})
 \end{align*}
 $$
-</span>
+</div>
 が成り立つので、$\widetilde{f}$はモノイド準同型である。
 
 また、モノイド準同型$g:G(M)\longrightarrow N$が$g\circ \iota=f$を満足するとき、
@@ -183,9 +183,13 @@ $G(\mathbb{N})$と$\mathbb{Z}$は群として同型である。
 </Prop>
 <Proof>
 任意の可換群$M$に対し次の同型を得る：
-<Center>
-$\mathrm{Hom}_\mathsf{CGrp}(G(\mathbb{N}),M)\cong \mathrm{Hom}_\mathsf{CMon}(\mathbb{N},i(M))\cong U(M)\cong \mathrm{Hom}_\mathsf{CGrp}(\mathbb{Z},M)$
-</Center>
+$$
+\begin{align*}
+\mathrm{Hom}_\mathsf{CGrp}(G(\mathbb{N}),M)&\cong \mathrm{Hom}_\mathsf{CMon}(\mathbb{N},i(M)) \\
+                                            &\cong U(M)\\
+                                            &\cong \mathrm{Hom}_\mathsf{CGrp}(\mathbb{Z},M)
+\end{align*}
+$$
 したがって、米田の補題から$G(\mathbb{N})\cong \mathbb{Z}$となる。
 </Proof>
 ### 最後に
