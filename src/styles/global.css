@@ -58,6 +58,11 @@ li {
 .scroll {
     overflow-x: auto;
     overflow-y: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+}
+.scroll::-webkit-scrollbar {
+  display: none;              /* Chrome / Safari / Opera */
 }
 pre::-webkit-scrollbar{
     display:none;
@@ -173,7 +178,9 @@ pre {
     }
     body {
         font-size: 0.9em;
-        margin: 1em 5% 1em 1em;
+        /* margin: 1em 1em 1em 1em; */
+        margin-left:1.5em;
+        margin-right:1.5em;
     }
     .description {
         font-size: 0.8em;
