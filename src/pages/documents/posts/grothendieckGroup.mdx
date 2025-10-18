@@ -2,7 +2,7 @@
 layout: ../../../layouts/MarkdownPostsLayout.astro
 title: "型で数を作る(Grothendieck群編)"
 lastUpdatedDate: 2025-10-18
-description: "可換モノイドから得られる普遍的な群について纏めます。"
+description: "可換モノイドから得られる普遍的な可換群について纏めます。"
 tags: ["型で数を作る","モノイド","Grothendieck群","圏論"]
 ---
 import Def from "../../../latexEnvs/Def.astro";
@@ -10,14 +10,13 @@ import Proof from "../../../latexEnvs/Proof.astro";
 import Prop from "../../../latexEnvs/Prop.astro";
 import Lemma from "../../../latexEnvs/Lemma.astro";
 import Theorem from "../../../latexEnvs/Theorem.astro";
-import Center from "../../../latexEnvs/Center.astro";
-import Align from "../../../latexEnvs/Align.astro";
 
 前回の<span style="color:#9f4561;">[型で数を作る(自然数編)](https://yokose-jin.github.io/mypage/documents/posts/construstNaturalNumber/)</span>
-では、Haskellの型システムを用いて自然数を構成した。次にやるのはもちろん、自然数から整数を構成することである。
-自然数から整数を構成しようと思ったとき、各自然数の符号を反転した元を追加し、そこに加法やら乗法を定めれば良い。
+では、Haskellの型システムを用いて自然数を構成した。次はもちろん、自然数から整数を構成する。
+自然数から整数を構成しようと思ったとき、各自然数の符号を反転した元を追加し、そこに加法やら乗法やらを定めれば良い。
 しかしここで、この「各自然数の符号を反転した元を追加する」という操作は圏論的な意味で普遍なのだろうかという疑問が生じる。
-この疑問に答えるため、この記事では一般的に可換モノイドから自然に得られる群の構成を行う。
+また、形式的に逆元を追加していくのは、代数的に意味をなすのかという疑問も生じる。
+この疑問に答えるため、この記事では一般的に可換モノイドから自然に得られる可換群の構成を行う。
 
 ### モノイド・群
 まずは基本的な言葉の定義をしていく。
@@ -31,9 +30,11 @@ import Align from "../../../latexEnvs/Align.astro";
 また、$\cdot\;:\mathbb{N}\times\mathbb{N} \longrightarrow \mathbb{N}\;;\;(m,n)\mapsto mn$も二項演算である。
 <Def title="半群">
 空でない集合$M$上の演算$\mu:M\times M \longrightarrow M$が結合的であるとき、つまり、任意の$M$の元$a,b,c$に対して
-<Center>
-$a(bc)=(ab)c$
-</Center>
+$$
+\begin{equation*}
+a(bc)=(ab)c
+\end{equation*}
+$$
 が成り立つとき、$(M,\mu)$を半群という。このとき、$a(bc)$は括弧の入れ方に依らず一意に定まるので、単にこれを$abc$と書く。
 </Def>
 自然数に定まる通常の和と積は結合的であるので、それらの演算に関して、$\mathbb{N}$は半群になる。
@@ -57,9 +58,9 @@ $(M,\mu,e)$がモノイドであるとは、$(M,\mu)$が単位元$e$を持つ半
 </Def>
 <Def title="モノイド準同型">
 $(M,\mu,e_{M})$と$(N,\nu,e_{N})$をモノイドとする。写像$f:M\longrightarrow N$が以下の条件を満たすとき、$f$をモノイド準同型という。
-> 任意の$a,b\in M$に対して$f(\mu(a,b))=\nu(f(a),f(b))$が成り立つ。
+> ・任意の$a,b\in M$に対して$f(\mu(a,b))=\nu(f(a),f(b))$が成り立つ。
 
-> $f(e_{M})=e_{N}.$
+> ・$f(e_{M})=e_{N}.$
 </Def>
 任意のモノイド$(M,\mu,e)$に対して$\mathop\mathrm{id}_{M}$はモノイド準同型である。モノイド準同型の合成もまたモノイド準同型である。
 <Def title="モノイドのなす圏">
@@ -75,28 +76,55 @@ $(M,\mu,e)$をモノイドとする。$M$の元$x$の逆元が存在すれば、
 $x'$と$x''$を$x$の逆元とする。このとき、$x'=x'e=x'(xx'')=(x'x)x''=ex''=x''$となる。
 </Proof>
 <Def title="群">
-任意の元が可逆元であるようなモノイドを群と呼ぶ。また、演算が可換になるような群を可換群という。
+任意の元が可逆元であるようなモノイドを群と呼ぶ。また、演算が可換になるような群を可換群という。群のなす圏を$\mathsf{Grp}$、可換群のなす圏を$\mathsf{CGrp}$と書く。もちろんこれらの対象は群(可換群)であり、射はモノイド準同型である。
 </Def>
 $(\mathbb{N},+,0)$はモノイドであるが、群ではない。実際、$1+n=0$となる$n$が存在したとすると、$0$に後者が存在することになり、矛盾する。つまり、$1$は可逆元ではない。
 我々がよく知っている整数とその加法について、$(\mathbb{Z},+,0)$は群になる。実際、これはモノイドになり、かつ任意の$\mathbb{Z}$の元$n$について逆元$-n$が存在する。
 
 ### Grothendieck群
-先に述べた通り、$(\mathbb{N},+,0)$はモノイドであるが群ではない、しかし$(\mathbb{Z},+,0)$は群になった。この二つの違いは、群の定義から明らかなように、すべての元が可逆元を持つかどうかということである。
-我々が知っているように、整数全体の集合は、すべての自然数に対しその加法逆元を追加した集合になる。つまり、モノイド$(\mathbb{N},+,0)$に逆元をうまく追加して群$(\mathbb{Z},+,0)$を作っている。この操作を一般のモノイドに対して考えてみる。そこで現れるのがGrothendieck群である。
+先に述べた通り、$(\mathbb{N},+,0)$はモノイドであるが群ではない、しかし$(\mathbb{Z},+,0)$は群になった。この二つの違いは、$\mathbb{Z}$はすべてのが可逆元であるが、$\mathbb{N}$はそうでないことに由来する。
+我々が知っているように、整数全体の集合は、すべての自然数に対しその加法に関する逆元を追加した集合になる。
+つまり、モノイド$(\mathbb{N},+,0)$に逆元をうまく追加して群$(\mathbb{Z},+,0)$を作っているのだ。
+この操作を一般のモノイドに対して考えてみると、現れてくるのがGrothendieck群である。
 
 これ以降、可換モノイドの演算を$+$と書き、単位元を$0$とする。また、可換モノイド$(M,+,0)$を単に$M$と表す。
 <Prop>
-$M$を可換モノイドとする。$M\times M$上の関係$\sim$を$(m_{1},n_{1})\sim (m_{2},n_{2})\Leftrightarrow \exists k\in M\; m_{1}+n_{2}+k=m_{2}+n_{1}+k$と定めれば、これは同値関係となる。
+$M$を可換モノイドとする。$M\times M$上の関係$\sim$を
+$$
+\begin{align*}
+&(m_{1},n_{1})\sim (m_{2},n_{2})\\
+&\Longleftrightarrow \exists k\in M\; m_{1}+n_{2}+k=m_{2}+n_{1}+k
+\end{align*}
+$$
+と定めれば、これは同値関係となる。
 </Prop>
 <Proof>
 対称律、反射律は明らかである。推移律を示そう。$(m_{1},n_{1})\sim (m_{2},n_{2})$かつ$(m_{2},n_{2})\sim (m_{3},n_{3})$ならば、ある$k,k'\in M$が存在して
-$m_{1}+n_{2}+k=m_{2}+n_{1}+k$と$m_{2}+n_{3}+k'=m_{3}+n_{2}+k'$が成り立つ。よって、$M$の元$l=m_{2}+n_{2}+k+k'$に対し、$m_{1}+n_{3}+l=m_{3}+n_{1}+l$即ち$(m_{1},n_{1})\sim (m_{3},n_{3})$が成り立つ。
+$$
+\begin{align*}
+m_{1}+n_{2}+k&=m_{2}+n_{1}+k \\
+m_{2}+n_{3}+k'&=m_{3}+n_{2}+k'
+\end{align*}
+$$
+が成り立つ。よって$M$の元$l=m_{2}+n_{2}+k+k'$に対し
+$$
+\begin{equation*}
+m_{1}+n_{3}+l=m_{3}+n_{1}+l
+\end{equation*}
+$$
+が成り立ち、したがって$(m_{1},n_{1})\sim (m_{3},n_{3})$となる。
 </Proof>
 <Def>
 可換モノイド$M$に対し、上の同値関係による、$M\times M$の商$(M\times M)/\mathord\sim$を$G(M)$と書く。
 </Def>
 <Prop>
-可換モノイド$M$に対して、$G(M)$上の演算$+$を$\overline{(m_1,n_1)}+\overline{(m_2,n_2)}:=\overline{(m_1+m_2,n_1+n_2)}$によって定めると、これはwell-definedである。また、この演算は可換である。
+可換モノイド$M$に対して、$G(M)$上の演算$+$を
+$$
+\begin{equation*}
+\overline{(m_1,n_1)}+\overline{(m_2,n_2)}:=\overline{(m_1+m_2,n_1+n_2)}
+\end{equation*}
+$$
+によって定めると、これはwell-definedである。また、この演算は可換である。
 </Prop>
 <Proof>
 $\overline{(m_1,n_1)}=\overline{(\mu_1,\nu_1)}$かつ$\overline{(m_2,n_2)}=\overline{(\mu_2,\nu_2)}$であったとする。このとき、ある$k_{1},k_{2}\in M$が存在して
@@ -118,10 +146,12 @@ Grothendieck群の構成は、次の圏論的な意味で自然である。つ�
 $M$を可換モノイド、$\iota:M\longrightarrow G(M)$を自然な射とする。このとき、任意の可換群$N$とモノイド準同型$f:M\longrightarrow N$に対して、$\widetilde{f}\circ \iota=f$となるようなモノイド準同型$\widetilde{f}:G(M)\longrightarrow N$が一意に存在する。
 </Prop>
 <Proof>
-任意の可換群$N$とモノイド準同型$f:M\longrightarrow N$に対して、
-<Center>
-$\widetilde{f}:G(M)\longrightarrow N$を$\widetilde{f}(\overline{(m,n)}):=f(m)-f(n)$
-</Center>
+任意の可換群$N$とモノイド準同型$f:M\longrightarrow N$に対して、$\widetilde{f}:G(M)\longrightarrow N$を
+$$
+\begin{equation*}
+\widetilde{f}(\overline{(m,n)}):=f(m)-f(n)
+\end{equation*}
+$$
 と定めれば、これはwell-definedなモノイド準同型となる。
 実際、$\overline{(m_1,n_1)}=\overline{(m_2,n_2)}$であれば、ある$k\in M$が存在して$m_1+n_2+k=m_2+n_1+k$となり、これに$f$を適応すると、$f$がモノイド準同型であることと$N$が群であることから$f(m_1)-f(n_1)=f(m_2)-f(n_2)$を得る。よって、$\widetilde{f}$はwell-definedである。
 また、任意の$\overline{(m_1,n_1)},\overline{(m_2,n_2)}\in G(M)$に対して
@@ -157,9 +187,11 @@ $$
 <Prop>
 可換群のなす圏を$\mathsf{CGrp}$と書くと、自然な関手$i:\mathsf{CGrp}\longrightarrow \mathsf{CMon}\;;\;G\mapsto G$が定まる。この関手を忘却関手という。
 Grothendieck群の普遍性から、関手$G:\mathsf{CMon}\longrightarrow \mathsf{CGrp}\;;\; M\mapsto G(M)$が定まるが、このとき、可換モノイド$M$と可換群$N$について自然な全単射
-<Center>
-$\mathrm{Hom}_\mathsf{CGrp}(G(M),N) \cong \mathrm{Hom}_\mathsf{CMon}(M,i(N))$
-</Center>
+$$
+\begin{equation*}
+\mathrm{Hom}_\mathsf{CGrp}(G(M),N) \cong \mathrm{Hom}_\mathsf{CMon}(M,i(N))
+\end{equation*}
+$$
 が存在する。即ち、関手$G$は忘却関手$i$の左随伴である。
 </Prop>
 ### 自然数から整数を作る
@@ -175,7 +207,7 @@ $f:\mathbb{N}\longrightarrow M$をモノイド準同型とする。このとき�
 </Proof>
 同様の議論から、$\mathbb{Z}$に対しても次が成り立つ：
 <Prop>
-$(M,+,0)$を可換群とすると、自然な全単射$\mathrm{Hom}_\mathsf{CGrp}(\mathbb{Z},M)\cong U(M)$がある。ここで、$U$は$\mathsf{CMon}$から$\mathsf{Set}$への忘却関手である。
+$(M,+,0)$を可換群とすると、自然な全単射$\mathrm{Hom}_\mathsf{CGrp}(\mathbb{Z},M)\cong U(M)$がある。ここで、$U$は$\mathsf{CGrp}$から$\mathsf{Set}$への忘却関手である。
 </Prop>
 よって、目標の命題を示すことができる：
 <Prop>
@@ -194,4 +226,4 @@ $$
 </Proof>
 ### 最後に
 この記事では、可換モノイドから可換群を得る自然な方法についてまとめた。そして最後に自然数全体のなす可換モノイドから自然に得られる可換群が、整数全体の定める可換群になることを示した。
-写像の計算をするだけであまり面白くないため、写像の自然性については証明を省いた。
+写像の自然性については、写像の計算をするだけであまり面白くないため、証明を省いた。

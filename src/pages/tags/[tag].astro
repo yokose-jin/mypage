@@ -70,7 +70,7 @@ const baseUrl = import.meta.env.BASE_URL;
                 <li>
                     <span class="material-icons icon">article</span>
                     <a class="docTitle" href={post.url}>{post.frontmatter.title}</a>
-                    <span class="lastUpdatedDate">最終更新日:{post.frontmatter.lastUpdatedDate.slice(0,10)}</span>
+                    <div class="lastUpdatedDate">最終更新日:{post.frontmatter.lastUpdatedDate.slice(0,10)}</div>
                 </li>
                 <p class="description">{post.frontmatter.description}</p>
             ))}
