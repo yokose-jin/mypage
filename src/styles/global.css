@@ -55,6 +55,10 @@ li {
     margin-left:4px;
     margin-right:4px;
 }
+.scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 pre::-webkit-scrollbar{
     display:none;
 }

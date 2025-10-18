@@ -11,6 +11,7 @@ import Prop from "../../../latexEnvs/Prop.astro";
 import Lemma from "../../../latexEnvs/Lemma.astro";
 import Theorem from "../../../latexEnvs/Theorem.astro";
 import Center from "../../../latexEnvs/Center.astro";
+import Align from "../../../latexEnvs/Align.astro";
 
 前回の<span style="color:#9f4561;">[型で数を作る(自然数編)](https://yokose-jin.github.io/mypage/documents/posts/construstNaturalNumber/)</span>
 では、Haskellの型システムを用いて自然数を構成した。次にやるのはもちろん、自然数から整数を構成することである。
@@ -124,6 +125,7 @@ $\widetilde{f}:G(M)\longrightarrow N$を$\widetilde{f}(\overline{(m,n)}):=f(m)-f
 と定めれば、これはwell-definedなモノイド準同型となる。
 実際、$\overline{(m_1,n_1)}=\overline{(m_2,n_2)}$であれば、ある$k\in M$が存在して$m_1+n_2+k=m_2+n_1+k$となり、これに$f$を適応すると、$f$がモノイド準同型であることと$N$が群であることから$f(m_1)-f(n_1)=f(m_2)-f(n_2)$を得る。よって、$\widetilde{f}$はwell-definedである。
 また、任意の$\overline{(m_1,n_1)},\overline{(m_2,n_2)}\in G(M)$に対して
+<span class="scroll">
 $$
 \begin{align*}
 \widetilde{f}(\overline{(m_1,n_1)}+\overline{(m_2,n_2)})&=\widetilde{f}(\overline{(m_1+m_2,n_1+n_2)})\\
@@ -132,13 +134,13 @@ $$
                                                         &=\widetilde{f}(\overline{(m_1,n_1)})+\widetilde{f}(\overline{(m_2,n_2)})
 \end{align*}
 $$
+</span>
 が成り立つので、$\widetilde{f}$はモノイド準同型である。
 
 また、モノイド準同型$g:G(M)\longrightarrow N$が$g\circ \iota=f$を満足するとき、
 任意の$\overline{(m,n)}\in G(M)$に対して
 $$
 \begin{align*}
-
 g(\overline{(m,n)})&=g(\overline{(m,0)}+\overline{(0,n)}) \\
                     &=g(\overline{(m,0)}-\overline{(n,0)}) \\
                     &=g(\overline{(m,0)})-g(\overline{(n,0)})\\
