@@ -6,6 +6,7 @@ html {
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
+    width:100vw;
 }
 body {
     font-family: "Noto Serif JP", serif;
@@ -62,6 +63,7 @@ li {
     max-width: 100%;
     box-sizing: border-box;
     white-space: nowrap;
+    padding-left:0;
 }
 .scroll::-webkit-scrollbar {
     display: none;
