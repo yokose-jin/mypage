@@ -73,7 +73,7 @@ pre {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
-    /* white-space: nowrap; */
+    white-space: pre-wrap;
 }
 code {
     background: #f2f0ed;
