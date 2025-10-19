@@ -9,6 +9,7 @@ html {
 }
 body {
     /* font-family: "Shippori Mincho B1", serif; */
+    /* font-family: "Hina Mincho", serif; */
     font-family: "Noto Serif JP", serif;
     color : #554f4a;
     background-color : #fbf9f6;
@@ -20,7 +21,8 @@ a {
     transition: 0.3s;
 }
 a:hover {
-    text-shadow: 1px 1px 5px #b2b0afaa;
+    /* text-shadow: 1px 1px 5px inherit; */
+    text-shadow: 1px 1px 5px #c1bcb9aa;
 }
 li {
     margin-top: 1em;
@@ -73,6 +75,12 @@ pre {
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
+}
+code {
+    background: #f2f0ed;
+}
+pre code {
+    background: inherit;
 }
 /* pc */
 @media screen and (min-width: 1030px) {
@@ -162,10 +170,10 @@ pre {
         margin-right:5%;
     }
 }
-/* iphone */
+/* スマホ */
 @media screen and (max-width: 740px) {
     code {
-        font-size: 1.2em;
+        font-size: 1.1em;
         padding: 0.15em 0.3em;
         border-radius: 4px;
     }
@@ -175,18 +183,18 @@ pre {
         overflow-x: auto;
     }
     pre code {
-        font-size: 1.1em;
+        font-size: 1em;
     }
     body {
-        font-size: 0.9em;
+        font-size: 0.8em;
         /* margin: 1em 1em 1em 1em; */
         margin-left:1.5em;
         margin-right:1.5em;
     }
     .description {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
     .docTitle {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 }

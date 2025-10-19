@@ -24,9 +24,9 @@ import Theorem from "../../../latexEnvs/Theorem.astro";
 
 <Def title="Peano系">
 集合$N$に対し、三つ組$(N,s,0)$が以下の条件を満たすとき、これをPeano系という。
-
+<div class="scroll">
 >(P1) $0\in N$である。
-  
+
 >(P2) $s$は$N$から$N$への写像である。
 
 >(P3) $s$は単射である。
@@ -34,7 +34,7 @@ import Theorem from "../../../latexEnvs/Theorem.astro";
 >(P4) 全ての$n\in N$に対し、$s(n)\neq 0$である。
 
 >(P5) $N$の部分集合$S$が $0\in S\wedge (n\in S \Rightarrow s(n)\in S)$を満たすとき、$S=N$となる。
-
+</div>
 この(P1)から(P5)の条件をPeanoの公理という。Peano系$(N,s,0)$を自然数と呼ぶことにする。
 </Def>
 
@@ -54,7 +54,7 @@ data Nat = Zero | Succ Nat deriving (Show)
 つまり`Nat`型とは、`Zero`か`Succ Nat`の形をしたものの集まりである。例えば、`Succ Zero`や`Succ (Succ Zero)`などは`Nat`型の値になる。この段階で、`Succ`という`Nat`から`Nat`への関数が定まっており、`Nat`の元として`Zero`を定義している。つまり、三つ組`(Nat,Succ,Zero)`はPeano公理系の(P1)と(P2)そして(P5)を満たしている。
 実際、(P1)と(P2)に関してはそのまま成り立ち、`Nat`の定義から、`Nat`の値の集まり`S`が`Zero`を含み、そして`m`が`S`の値であれば`Succ m`も`S`の値となれば、`S`は当然`Zero,Succ (Zero), Succ (Succ Zero),...`も全て含むことになり、これは`Nat`に他ならない。
 
-今回、`Nat`を再帰的に定義したので、`Nat`が(P5)を満たすのは当たり前になっているが、一般にはPeano系に対して再帰的な関数を定義する際、再帰定理を使うことになる。再帰定理については次を参照：<span style="color:#9f4561;">[wikipedia](https://ja.wikipedia.org/wiki/ペアノの公理)</span>
+今回、`Nat`を再帰的に定義したので、`Nat`が(P5)を満たすのは当たり前になっているが、一般にはPeano系に対して再帰的な関数を定義する際、再帰定理を使うことになる。再帰定理については<span class="url">[wikipedia](https://ja.wikipedia.org/wiki/ペアノの公理)</span>を参照。
 #### ・等号を定める
 あとは`Nat`型が(P3)と(P4)を満たすことを示せば良い。しかし、このままでは(P3)と(P4)の条件以前に、そもそも`Nat`に於ける等しさが定義されていない。まずは、`Nat`型に等しさの概念を導入しよう。すなわちこれは、`Nat`を`Eq`型クラスのインスタンスにするということである。
 
@@ -180,4 +180,4 @@ m .*. Zero = Zero
 Zero .*. n = Zero
 m .*. Succ n = (m.*.n) .+. m
 ```
-この記事で解説を省いたもの&mdash;再帰定理やPeano算術、そして自然数全体の一意性など&mdash;は<span style="color:#9f4561;">[wikipedia](https://ja.wikipedia.org/wiki/ペアノの公理)</span>や<span style="color:#9f4561;">[web上のpdf](https://www.math.is.tohoku.ac.jp/~obata/student/subject/TaikeiBook/Taikei-Book_15.pdf)</span>などを適宜参照されたい。
+この記事で解説を省いたもの&mdash;再帰定理やPeano算術、そして自然数全体の一意性など&mdash;は<span class="url">[wikipedia](https://ja.wikipedia.org/wiki/ペアノの公理)</span>や<span class="url">[TAIKEI-BOOK](https://www.math.is.tohoku.ac.jp/~obata/student/subject/TaikeiBook/Taikei-Book_15.pdf)</span>などを適宜参照されたい。

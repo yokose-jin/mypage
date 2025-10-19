@@ -1,5 +1,5 @@
 ---
-import PageTitle from "../components/PageTitleLink.astro";
+import PageTitleLink from "../components/PageTitleLink.astro";
 import "../styles/global.css";
 const baseUrl = import.meta.env.BASE_URL;
 ---
@@ -13,16 +13,20 @@ const baseUrl = import.meta.env.BASE_URL;
 		<title>ホーム</title>
 	</head>
 	<body>
-		<span class="prefaceTitle">前書き</span>
-		<p class="description">
-			書いた文書を置いていく場所です。自分がわかりやすいように書いた文章がほとんどなので、他人から見ればわかりにくい説明があるかもしれません、ご注意ください。
-			文書の内容について何か誤りなどがありましたら、連絡いただけるとすごく助かります。
-			<br>
-			下のページタイトルをクリックすると、そのページへ移動できます。
-		</p>
-		<PageTitle title="ゼミのノート" link=`${baseUrl}/seminarNotes` description="ゼミの発表用に書いたノートを載せていくページです。"/>
-		<PageTitle title="備忘録" link=`${baseUrl}/memo` description="勉強したことのまとめや、何かしらの問題が解決した際の備忘録を載せていくページです。"/>
-		<PageTitle title="便利なサイト集" link=`${baseUrl}/convenientSites` description="知っておけば何かしらと便利なサイトのリンクを載せていくページです。"/>
-		<PageTitle title="ブログ" link=`${baseUrl}/blog` description="pdfでは書きにくいプログラミング関連の文書を纏めたページです。"/>
+		<header>
+			<span class="prefaceTitle">前書き</span>
+			<p class="description">
+				書いた文書を置いていく場所です。自分がわかりやすいように書いた文章がほとんどなので、他人から見ればわかりにくい説明があるかもしれません、ご注意ください。
+				文書の内容について何か誤りなどがありましたら、連絡いただけるとすごく助かります。
+				<br>
+				下のページタイトルをクリックすると、そのページへ移動できます。
+			</p>
+		</header>
+		<main>
+			<PageTitleLink title="ゼミのノート" link=`${baseUrl}/seminarNotes` description="ゼミの発表用に書いたノートを載せていくページです。"/>
+			<PageTitleLink title="備忘録" link=`${baseUrl}/memo` description="勉強したことのまとめや、何かしらの問題が解決した際の備忘録を載せていくページです。"/>
+			<PageTitleLink title="便利なサイト集" link=`${baseUrl}/convenientSites` description="知っておけば何かしらと便利なサイトのリンクを載せていくページです。"/>
+			<PageTitleLink title="ブログ" link=`${baseUrl}/blog` description="pdfでは書きにくいプログラミング関連の文書を纏めたページです。"/>
+		</main>
 	</body>
 </html>

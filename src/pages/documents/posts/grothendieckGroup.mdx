@@ -11,7 +11,7 @@ import Prop from "../../../latexEnvs/Prop.astro";
 import Lemma from "../../../latexEnvs/Lemma.astro";
 import Theorem from "../../../latexEnvs/Theorem.astro";
 
-前回の<span style="color:#9f4561;">[型で数を作る(自然数編)](https://yokose-jin.github.io/mypage/documents/posts/construstNaturalNumber/)</span>
+前回の<span class="url">[型で数を作る(自然数編)](https://yokose-jin.github.io/mypage/documents/posts/construstNaturalNumber/)</span>
 では、Haskellの型システムを用いて自然数を構成した。次はもちろん、自然数から整数を構成する。
 自然数から整数を構成しようと思ったとき、各自然数の符号を反転した元を追加し、そこに加法やら乗法やらを定めれば良い。
 しかしここで、この「各自然数の符号を反転した元を追加する」という操作は圏論的な意味で普遍なのだろうかという疑問が生じる。
@@ -90,12 +90,14 @@ $(\mathbb{N},+,0)$はモノイドであるが、群ではない。実際、$1+n=
 これ以降、可換モノイドの演算を$+$と書き、単位元を$0$とする。また、可換モノイド$(M,+,0)$を単に$M$と表す。
 <Prop>
 $M$を可換モノイドとする。$M\times M$上の関係$\sim$を
+<div class="scroll">
 $$
 \begin{align*}
 &(m_{1},n_{1})\sim (m_{2},n_{2})\\
 &\Longleftrightarrow \exists k\in M\; m_{1}+n_{2}+k=m_{2}+n_{1}+k
 \end{align*}
 $$
+</div>
 と定めれば、これは同値関係となる。
 </Prop>
 <Proof>
@@ -186,7 +188,7 @@ $$
 この命題は、次のように言い換えることもできる。
 <Prop>
 可換群のなす圏を$\mathsf{CGrp}$と書くと、自然な関手$i:\mathsf{CGrp}\longrightarrow \mathsf{CMon}\;;\;G\mapsto G$が定まる。この関手を忘却関手という。
-Grothendieck群の普遍性から、関手$G:\mathsf{CMon}\longrightarrow \mathsf{CGrp}\;;\; M\mapsto G(M)$が定まるが、このとき、可換モノイド$M$と可換群$N$について自然な全単射
+Grothendieck群の普遍性から関手$G:\mathsf{CMon}\longrightarrow \mathsf{CGrp}\;;\; M\mapsto G(M)$が定まるが、このとき、可換モノイド$M$と可換群$N$について自然な全単射
 $$
 \begin{equation*}
 \mathrm{Hom}_\mathsf{CGrp}(G(M),N) \cong \mathrm{Hom}_\mathsf{CMon}(M,i(N))
@@ -207,7 +209,13 @@ $f:\mathbb{N}\longrightarrow M$をモノイド準同型とする。このとき�
 </Proof>
 同様の議論から、$\mathbb{Z}$に対しても次が成り立つ：
 <Prop>
-$(M,+,0)$を可換群とすると、自然な全単射$\mathrm{Hom}_\mathsf{CGrp}(\mathbb{Z},M)\cong U(M)$がある。ここで、$U$は$\mathsf{CGrp}$から$\mathsf{Set}$への忘却関手である。
+$(M,+,0)$を可換群とすると、自然な全単射
+$$
+\begin{equation*}
+    \mathrm{Hom}_\mathsf{CGrp}(\mathbb{Z},M)\cong U(M)
+\end{equation*}
+$$
+がある。ここで、$U$は$\mathsf{CGrp}$から$\mathsf{Set}$への忘却関手である。
 </Prop>
 よって、目標の命題を示すことができる：
 <Prop>

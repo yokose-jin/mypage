@@ -6,7 +6,7 @@
                 "title": "Grothendieck Circle",
                 "titleLang": "en",
                 "link": "https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/pubtexts.php",
-                "description": "EGAやSGAなどのGrothendieckの著作が纏まっているページ。Grothendieckは生前、彼自身の著作をインターネット上から削除して欲しいとの旨の手紙を友人に宛てているが、思うにGrothendieckの著作が多くの人に届くことの価値は矢張り大きい。Grothendieck Circleのメンバーは商用利用のためGrothendieckの著作を公開しているわけではなく、単に彼の著作を世に広めることを目的として活動している。つまり彼らはGrothendieck個人の意志よりも、数学の発展と、彼の著作の教育的価値を重要視したのだ。Grothendieckの著作の出版は、彼の意向に反しているとはいえ、代数幾何学を学ぶ私たちにとってこれ以上なく有益であるため、有り難く著作を読ませて頂くことにする。"
+                "description": "EGAやSGAなどのGrothendieckの著作が纏まっているページ。Grothendieckは生前、彼自身の著作をインターネット上から削除して欲しいとの旨の手紙を友人に宛てている。しかしGrothendieckの著作が多くの人に届くことの価値は矢張り大きい。Grothendieck Circleのメンバーは商用利用のためGrothendieckの著作を公開しているわけではなく、単に彼の著作を世に広めることを目的として活動している。つまり彼らはGrothendieck個人の意志よりも、数学の発展と、彼の著作の教育的価値を重要視したのだ。Grothendieckの著作の出版は、彼の意向に反しているとはいえ、代数幾何学を学ぶ私たちにとってこれ以上なく有益であるため、有り難く著作を読ませて頂くことにする。"
             },
             {
                 "title": "Stacks Project",
@@ -18,7 +18,13 @@
                 "title": "AIM workshop problem lists",
                 "titleLang": "en",
                 "link": "https://aimath.org/problemlists/",
-                "description": "いろんな分野のいろんな問題がまとまっている。"
+                "description": "いろんな分野のいろんな問題が纏まっている。"
+            },
+            {
+                "title": "Open problems in Algebraic Geometry",
+                "titleLang": "en",
+                "link": "https://dspace.library.uu.nl/bitstream/handle/1874/2515/1162.pdf?sequence=1",
+                "description": "代数幾何のopen problemsが纏まっている。"
             },
             {
                 "title": "壱大整域",
@@ -88,7 +94,7 @@
                 "title": "青空文庫",
                 "titleLang": "jp",
                 "link": "https://www.aozora.gr.jp",
-                "description": "なんと著作権の切れた本が無料で公開されている！"
+                "description": "なんと著作権の切れた小説が無料で公開されている！"
             }
         ]
     }

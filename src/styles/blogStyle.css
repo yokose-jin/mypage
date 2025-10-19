@@ -13,5 +13,14 @@ h4 {
     border-bottom: solid 1px #f6f3ee;
 }
 p {
-    margin:0px;
+    margin:1px;
+    line-height: 30px;
+}
+blockquote {
+    margin-left: 40px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.url {
+    color: #9f4561;
 }
