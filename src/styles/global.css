@@ -89,7 +89,8 @@ code {
 }
 pre code {
     background: inherit;
-    min-width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
 }
 /* pc */
 @media screen and (min-width: 1030px) {
