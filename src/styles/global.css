@@ -73,8 +73,9 @@ pre {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
-    /* padding-right: 0px; */
+    padding: 1em 0 1em 1em;
     box-sizing: border-box;
+    border-radius: 8px;
     /* white-space: nowrap; */
 }
 code {
@@ -82,6 +83,7 @@ code {
 }
 pre code {
     background: inherit;
+    min-width: 100%;
 }
 /* pc */
 @media screen and (min-width: 1030px) {
@@ -89,11 +91,6 @@ pre code {
         font-size: 1.2em;
         padding: 0.15em 0.3em;
         border-radius: 4px;
-    }
-    pre {
-        border-radius: 8px;
-        padding: 1em;
-        overflow-x: auto;
     }
     pre code {
         font-size: 1.1em;
@@ -112,11 +109,6 @@ pre code {
         padding: 0.15em 0.3em;
         border-radius: 4px;
     }
-    pre {
-        border-radius: 8px;
-        padding: 1em;
-        overflow-x: auto;
-    }
     pre code {
         font-size: 1.15em;
     }
@@ -133,11 +125,6 @@ pre code {
         font-size: 1.3em;
         padding: 0.15em 0.3em;
         border-radius: 4px;
-    }
-    pre {
-        border-radius: 8px;
-        padding: 1em;
-        overflow-x: auto;
     }
     pre code {
         font-size: 1.25em;
@@ -156,11 +143,6 @@ pre code {
         padding: 0.15em 0.3em;
         border-radius: 4px;
     }
-    pre {
-        border-radius: 8px;
-        padding: 1em;
-        overflow-x: auto;
-    }
     pre code {
         font-size: 1.25em;
     }
@@ -177,11 +159,6 @@ pre code {
         font-size: 1.1em;
         padding: 0.15em 0.3em;
         border-radius: 4px;
-    }
-    pre {
-        border-radius: 8px;
-        padding: 1em;
-        overflow-x: auto;
     }
     pre code {
         font-size: 1em;
