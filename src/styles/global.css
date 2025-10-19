@@ -8,8 +8,6 @@ html {
     scrollbar-width: none;
 }
 body {
-    /* font-family: "Shippori Mincho B1", serif; */
-    /* font-family: "Hina Mincho", serif; */
     font-family: "Noto Serif JP", serif;
     color : #554f4a;
     background-color : #fbf9f6;
@@ -21,7 +19,6 @@ a {
     transition: 0.3s;
 }
 a:hover {
-    /* text-shadow: 1px 1px 5px inherit; */
     text-shadow: 1px 1px 5px #c1bcb9aa;
 }
 li {
@@ -62,19 +59,21 @@ li {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 .scroll::-webkit-scrollbar {
-  display: none;              /* Chrome / Safari / Opera */
+    display: none;
 }
 pre::-webkit-scrollbar{
     display:none;
 }
 pre {
-    /*スクロールバー非表示（IE・Edge）*/
     -ms-overflow-style: none;
-    /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    /* white-space: nowrap; */
 }
 code {
     background: #f2f0ed;
@@ -187,7 +186,6 @@ pre code {
     }
     body {
         font-size: 0.8em;
-        /* margin: 1em 1em 1em 1em; */
         margin-left:1.5em;
         margin-right:1.5em;
     }
