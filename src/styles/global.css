@@ -81,6 +81,7 @@ pre {
     padding: 1em 0 1em 1em;
     box-sizing: border-box;
     border-radius: 8px;
+    scrollbar-gutter: stable;
     /* white-space: nowrap; */
 }
 code {
@@ -88,8 +89,10 @@ code {
     overflow-x: auto;
 }
 pre code {
+    display: inline-block;
+    box-sizing: border-box;
     background: inherit;
-    max-width: 100%;
+    min-width: 100%;
     overflow-x: auto;
 }
 /* pc */
