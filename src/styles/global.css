@@ -74,7 +74,7 @@ pre {
     overflow-y: hidden;
     max-width: 100%;
     /* padding-right: 0px; */
-    box-sizing: inherit;
+    box-sizing: border-box;
     /* white-space: nowrap; */
 }
 code {
