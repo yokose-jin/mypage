@@ -15,9 +15,10 @@ p {
     line-height: 25px;
 }
 blockquote {
-    margin-left: 40px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 2px 0px 2px 40px;
+    max-width:100%;
+    box-sizing:border-box;
+    /* overflow-x:auto; */
 }
 .url {
     color: #9f4561;

@@ -60,6 +60,7 @@ li {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
+    box-sizing: border-box;
     white-space: nowrap;
 }
 .scroll::-webkit-scrollbar {
@@ -69,6 +70,7 @@ pre::-webkit-scrollbar{
     display:none;
 }
 pre {
+    display: block;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-x: auto;
