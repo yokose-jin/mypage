@@ -21,8 +21,8 @@ p {
 blockquote {
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    /* max-width:100%; */
-    /* box-sizing:border-box; */
+    max-width:100%;
+    box-sizing:border-box;
     /* overflow-x:auto; */
 }
 blockquote p {
