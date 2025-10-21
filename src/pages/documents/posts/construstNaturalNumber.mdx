@@ -25,15 +25,15 @@ import Theorem from "../../../latexEnvs/Theorem.astro";
 <Def title="Peano系">
 集合$N$に対し、三つ組$(N,s,0)$が以下の条件を満たすとき、これをPeano系という。
 <div class="scroll">
->(P1) $0\in N$である。
+(P1). $0\in N$である。
 
->(P2) $s$は$N$から$N$への写像である。
+(P2). $s$は$N$から$N$への写像である。
 
->(P3) $s$は単射である。
+(P3). $s$は単射である。
 
->(P4) 全ての$n\in N$に対し、$s(n)\neq 0$である。
+(P4). 全ての$n\in N$に対し、$s(n)\neq 0$である。
 
->(P5) $N$の部分集合$S$が $0\in S\wedge (n\in S \Rightarrow s(n)\in S)$を満たすとき、$S=N$となる。
+(P5). $N$の部分集合$S$が $0\in S\wedge (n\in S \Rightarrow s(n)\in S)$を満たすとき、$S=N$となる。
 </div>
 この(P1)から(P5)の条件をPeanoの公理という。Peano系$(N,s,0)$を自然数と呼ぶことにする。
 </Def>
