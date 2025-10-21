@@ -92,13 +92,13 @@ instance Ord Nat where
     compare (Succ _) Zero = GT
 ```
 もちろん`Zero`は`Nat`の中で最も小さいものとしたいので、`Zero`と`(Succ _)`では必ず`(Succ _)`の方が大きいとした。最後に一般的な形について定義し、順序が完成する：
-{/* ```haskell
+```haskell
 instance Ord Nat where
     compare Zero Zero = EQ
     compare Zero (Succ _) = LT
     compare (Succ _) Zero = GT
     compare (Succ m) (Succ n) = compare m n --これを追加した
-``` */}
+```
 ghciで試してみると、次のようにきちんと動作することがわかる：
 ```haskell
 ghci> Zero > Succ (Succ Zero)
@@ -124,7 +124,7 @@ Zero .+. n = n
 m .+. Succ n = Succ (m .+. n)
 ```
 例えば、ghciで実験してみると、次のような出力が得られる：
-{/* ```haskell
+```haskell
 ghci> Zero .+. Succ (Succ Zero)
 Succ (Succ Zero)
 
@@ -133,7 +133,7 @@ Succ (Succ (Succ Zero))
 
 ghci> Succ (Succ (Succ (Succ Zero))) .+. Succ (Succ (Succ(Zero)))
 Succ (Succ (Succ (Succ (Succ (Succ (Succ Zero))))))
-``` */}
+```
 次に乗法を定めよう。こちらも加法の時と同じ様に定めれば良い。まずは`Zero`に何をかけても`Zero`となるようにし、通常の自然数においては$m\times (n+1)=m\times n + m$即ち$m\times s(n)=m\times n+m$が成り立つことを用いると、プログラムは次の様になる：
 ```haskell
 (.*.) :: Nat -> Nat -> Nat
@@ -142,7 +142,7 @@ Zero .*. n = Zero
 m .*. Succ n = (m.*.n) .+. m
 ```
 ghciで実験してみると、
-{/* ```haskell
+```haskell
 ghci> Zero .*. Succ (Succ Zero)
 Zero
 
@@ -151,7 +151,7 @@ Succ (Succ Zero)
 
 ghci> Succ (Succ (Succ (Succ Zero))) .*. Succ (Succ (Succ(Zero)))
 Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ (Succ Zero)))))))))))
-``` */}
+```
 となり、確かに欲しい結果が得られた。
 ### 最後に
 以上でHaskellの型システムを用いて自然数を定義することができた。プログラムの全体を以下に記す：
