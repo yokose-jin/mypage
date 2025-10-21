@@ -67,7 +67,7 @@ li {
     overflow-y: hidden;
     width: 100%;
     box-sizing: border-box;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     padding-left:0;
 }
 .scroll::-webkit-scrollbar {
