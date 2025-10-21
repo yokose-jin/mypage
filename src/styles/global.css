@@ -9,7 +9,6 @@ html {
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
-    width:auto;
 }
 body {
     font-family: "Noto Serif JP", serif;
