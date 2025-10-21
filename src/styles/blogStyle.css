@@ -37,6 +37,9 @@ blockquote {
 blockquote p {
     margin: 0;
 }
+body {
+    overflow-x: clip;
+}
 .url {
     color: #9f4561;
 }
