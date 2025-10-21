@@ -1,3 +1,6 @@
+/* *{
+    outline: 2px red solid;
+} */
 html::-webkit-scrollbar{
     display:none;
 }
@@ -6,7 +9,7 @@ html {
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
-    width:99vw;
+    width:auto;
 }
 body {
     font-family: "Noto Serif JP", serif;
@@ -78,7 +81,7 @@ pre {
     scrollbar-width: none;
     overflow-x: auto;
     overflow-y: hidden;
-    max-width: 100%;
+    max-width: auto;
     padding: 1em 0 1em 1em;
     box-sizing: border-box;
     border-radius: 8px;
