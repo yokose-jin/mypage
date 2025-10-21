@@ -9,6 +9,7 @@ html {
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
+    overflow-x: clip;
 }
 body {
     font-family: "Noto Serif JP", serif;
@@ -67,7 +68,7 @@ li {
     overflow-y: hidden;
     width: 100%;
     box-sizing: border-box;
-    /* white-space: nowrap; */
+    white-space: nowrap;
     padding-left:0;
 }
 .scroll::-webkit-scrollbar {
