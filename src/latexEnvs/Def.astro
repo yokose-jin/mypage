@@ -20,7 +20,9 @@ const {title} = Astro.props;
 </style>
 
 <div class="maintext">
-    <span class="def">&#9655;定義</span>{title && <span> ({title})</span>}
+    <div class="titlebox">
+        <span class="def">&#9655;定義</span>{title && <span> ({title})</span>}
+    </div>
     <dev>
         <slot/>
         <span class="findef">&#9633;</span>

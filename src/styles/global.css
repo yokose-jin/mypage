@@ -6,7 +6,7 @@ html {
     -ms-overflow-style: none;
     /*スクロールバー非表示（Firefox）*/
     scrollbar-width: none;
-    width:100vw;
+    width:99vw;
 }
 body {
     font-family: "Noto Serif JP", serif;
