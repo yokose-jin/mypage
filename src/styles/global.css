@@ -61,9 +61,11 @@ li {
     margin-right:4px;
 }
 .scroll {
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overflow-y: hidden;
-    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     white-space: nowrap;
     padding-left:0;
