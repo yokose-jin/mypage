@@ -67,7 +67,7 @@ li {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     overflow-y: hidden;
-    width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
     white-space: nowrap;
     padding-left:0;
