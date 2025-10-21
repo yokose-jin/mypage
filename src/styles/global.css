@@ -10,6 +10,7 @@ html {
 }
 body {
     font-family: "Noto Serif JP", serif;
+    font-weight: 200;
     color : #554f4a;
     background-color : #fbf9f6;
     margin-bottom: 200px;
@@ -86,6 +87,7 @@ pre {
 }
 code {
     background: #f2f0ed;
+    min-width: 100%;
     overflow-x: auto;
 }
 pre code {
