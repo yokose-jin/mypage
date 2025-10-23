@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/MarkdownPostsLayout.astro
-title: "型で数を作る(自然数編)"
+title: "数の型を作る(自然数編)"
 lastUpdatedDate: 2025-10-13
-description: "Haskellの型システムを用いて自然数を構成します。"
-tags: ["型で数を作る","型","Haskell"]
+description: "Haskellで自然数の型を構成します。"
+tags: ["数の型を作る","型","Haskell"]
 ---
 import Def from "../../../latexEnvs/Def.astro";
 import Proof from "../../../latexEnvs/Proof.astro";
@@ -11,7 +11,7 @@ import Prop from "../../../latexEnvs/Prop.astro";
 import Lemma from "../../../latexEnvs/Lemma.astro";
 import Theorem from "../../../latexEnvs/Theorem.astro";
 
-この記事の目標は、Haskellの型システムを使って自然数を型レベルで構成することである。
+この記事の目標は、Haskellで自然数の型を構成することである。
 その為、プログラムの意図が伝わることを意識し、形式的で厳密な議論は避けた部分がある。その詳細についてはいつか(自分が生きている間とは限らないが)記事にしようと思う。
 
 なお、この記事ではHaskellの基本的な文法は仮定した。(Haskellの文法が分からないと記事が読めないのならば、プログラムの意図も伝わらないのでは？と指摘されれば、返す言葉がない&#129394;)

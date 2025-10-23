@@ -14,11 +14,19 @@ html {
 body {
     font-family: "Noto Serif JP", serif;
     font-weight: 200;
-    color : #554f4a;
+    /* color : #000000; */
+    color : #453f3a;
+    /* color : #554f4a; */
     background-color : #fbf9f6;
     margin-bottom: 200px;
     padding: 1em 1em 1em 1em;
     overflow-x: clip;
+}
+.katex-html {
+    font-weight:lighter;
+    font-size:0.9em;
+    color : #524b44;
+    /* color:red; */
 }
 a {
     text-decoration: none;

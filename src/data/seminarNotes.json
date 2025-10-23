@@ -2,25 +2,20 @@
     {
         "category": "代数幾何",
         "files" : [
-            {
-                "title": "スキームの定義",
-                "link": "aaa",
-                "description": "スキームを定義する"
-            },
-            {
-                "title": "スキームの定義",
-                "link": "aaa",
-                "description": "スキームを定義する"
-            }
         ]
     },
     {
         "category": "圏論",
         "files" : [
+        ]
+    },
+    {
+        "category": "杉浦 解析学入門",
+        "files" : [
             {
-                "title": "スキームの定義",
+                "title": "複素対数関数・冪関数・逆三角関数",
                 "link": "aaa",
-                "description": "スキームを定義する"
+                "description": "複素関数の意味での対数関数、冪関数、逆三角関数を定義し、その基本的な性質を見る。"
             }
         ]
     }

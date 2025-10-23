@@ -1,9 +1,9 @@
 ---
 layout: ../../../layouts/MarkdownPostsLayout.astro
-title: "型で数を作る(Grothendieck群編)"
+title: "数の型を作る(Grothendieck群編)"
 lastUpdatedDate: 2025-10-18
 description: "可換モノイドから得られる普遍的な可換群について纏めます。"
-tags: ["型で数を作る","モノイド","Grothendieck群","圏論"]
+tags: ["数の型を作る","モノイド","Grothendieck群","圏論"]
 ---
 import Def from "../../../latexEnvs/Def.astro";
 import Proof from "../../../latexEnvs/Proof.astro";
@@ -11,12 +11,12 @@ import Prop from "../../../latexEnvs/Prop.astro";
 import Lemma from "../../../latexEnvs/Lemma.astro";
 import Theorem from "../../../latexEnvs/Theorem.astro";
 
-前回の<span class="url">[型で数を作る(自然数編)](https://yokose-jin.github.io/mypage/documents/posts/construstNaturalNumber/)</span>
+前回の<span class="url">[数の型を作る(自然数編)](https://yokose-jin.github.io/mypage/documents/posts/construstNaturalNumber/)</span>
 では、Haskellの型システムを用いて自然数を構成した。次はもちろん、自然数から整数を構成する。
 自然数から整数を構成しようと思ったとき、各自然数の符号を反転した元を追加し、そこに加法やら乗法やらを定めれば良い。
 しかしここで、この「各自然数の符号を反転した元を追加する」という操作は圏論的な意味で普遍なのだろうかという疑問が生じる。
 また、形式的に逆元を追加していくのは、代数的に意味をなすのかという疑問も生じる。
-この疑問に答えるため、この記事では一般的に可換モノイドから自然に得られる可換群の構成を行う。
+これらの疑問に答えるため、この記事では一般的に可換モノイドから自然に得られる可換群の構成を行う。
 
 ### モノイド・群
 まずは基本的な言葉の定義をしていく。
