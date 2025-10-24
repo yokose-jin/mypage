@@ -50,8 +50,9 @@ li {
 }
 .prefaceTitle {
     font-size: 1.2em;
-    padding: 0px 0px 0px 8px;
+    padding: 0px 0px 2px 8px;
     box-shadow: -3px 0px;
+    background:#f5f4f2;
 }
 .jpTitle {
     color: #9d4a4a;
