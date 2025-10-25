@@ -62,7 +62,7 @@ li {
 }
 .enTitle {
     color: #9d4a4a;
-    font-family: 'Courier',sans-serif;
+    font-family: 'Courier New',sans-serif;
     border-bottom: dashed 1px #9d4a4a;
     text-shadow: rgb(204, 203, 203) 1px 0 2px;
     word-break: break-all;
