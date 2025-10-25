@@ -1,26 +1,26 @@
 [
     {
-        "category": "代数幾何",
+        "category": "「代数幾何」上野健爾",
         "files" : [
         ]
     },
     {
-        "category": "圏論",
+        "category": "「圏論の基礎」Saunders Mac Lane",
         "files" : [
         ]
     },
     {
-        "category": "代数曲線論",
+        "category": "「代数曲線論」小木曽啓示",
         "files" : [
         ]
     },
     {
-        "category": "多様体論",
+        "category": "「多様体の基礎」松本幸夫",
         "files" : [
         ]
     },
     {
-        "category": "杉浦 解析学入門",
+        "category": "「解析入門」杉浦光夫",
         "files" : [
             {
                 "title": "複素対数関数・冪関数・逆三角関数",
