@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://yokose-jin.github.io',
+    site: 'https://yokose-jin.github.io/mypage',
     base: '/mypage',
     integrations: [
         mdx({
