@@ -5,11 +5,6 @@
         ]
     },
     {
-        "category": "「圏論の基礎」Saunders Mac Lane",
-        "files" : [
-        ]
-    },
-    {
         "category": "「代数曲線論」小木曽啓示",
         "files" : [
         ]
@@ -22,11 +17,6 @@
     {
         "category": "「解析入門」杉浦光夫",
         "files" : [
-            {
-                "title": "複素対数関数・冪関数・逆三角関数",
-                "link": "sugiura-log-pow-invTri-func.pdf",
-                "description": "複素関数の意味での対数関数、冪関数、逆三角関数を定義し、その基本的な性質を見る。"
-            }
         ]
     }
 ]
